@@ -40,25 +40,24 @@
 // =book
 // 	font-family: "book", Arial, sans-serif 
 // insert pics into css
-// div
+// div 
 // 	+pic("blabla.png")
 // span
 // 	+png(blabla)
 // p
 // 	+jpg(bla)
 
-+font(proximanova-regular, proximanova-regular-webfont)  
++font(Proxima-Nova-Regular, Proxima-Nova-Regular)  
 =pr
-	font-family: "proximanova-regular", Arial, sans-serif 
+	font-family: "Proxima-Nova-Regular", Arial, sans-serif 
 
-+font(proximanova-bold, proximanova-bold-webfont-webfont)  
++font(proximanova-bold, proximanova-bold)  
 =pb
 	font-family: "proximanova-bold", Arial, sans-serif 
-	font-weight: bold
 
 +font(proximanova-light, proximanova-light-webfont)  
 =pl
-	font-family: "proximanova-light", Arial, sans-serif 
+	font-family: "proximanova-light", Arial, sans-serif  
 
 $white: #fff
 $black: #000
@@ -66,9 +65,9 @@ $grey: #353535
 $blue: #0096FF
 
 body
-	font-size: 18px !important
+	font-size: 18px
 	line-height: 1.4
-	font-family: "proximanova-regular", Arial, sans-serif !important
+	+pr
 
 
 // common blocks 
@@ -166,13 +165,18 @@ body
 	&:hover
 		+opacity(.8)
 		+box-shadow(none)
+	&:focus
+		outline: none !important 
+.btn-top
+	display: inline-block
+	+svg(pic-scr-top, 22, 14)
 
 //product
 .product
 	margin-bottom: 60px
 	.slider
 		position: relative
-		margin: 10px 0 33px
+		margin: 0 0 33px
 		width: 100%
 		border: 3px solid #b8b8b8
 		+box
@@ -201,6 +205,7 @@ body
 		padding-left: 30px
 		+box
 	.product__title
+		margin: 0
 		font-size: 36px
 		color: $black
 		letter-spacing: -0.1px
@@ -249,52 +254,52 @@ body
 //select
 .select
 	position: relative
-	cursor: pointer
-	font-size: 18px
-	width: 100%
-	.select_white
-		background: #fff 
-	.select__text
-		position: relative
-		display: block
-		padding: 0 15px
-		height: 50px
-		line-height: 50px
-		white-space: nowrap
-		overflow: hidden
-		background: #f2f2f2
-		+box-shadow(inset 0 -5px 0 #d9d9d9)
-		text-overflow: ellipsis
-		&:after
-			content: ""
-			position: absolute
-			right: 20px
-			top: 50%
-			margin-top: -3px
-			width: 0px
-			height: 0px
-			border-style: solid
-			border-width: 10px 6px 0 6px
-			border-color: #000 transparent transparent transparent
-	.select__list
+	width: 100% !important
+	height: 50px !important
+	line-height: 50px !important
+	white-space: nowrap
+	border: none !important
+	background: #f2f2f2 !important
+	+box-shadow(inset 0 -5px 0 #d9d9d9 !important)
+	text-overflow: ellipsis
+	&:focus
+		outline: none !important
+	.caret
+		content: ""
 		position: absolute
-		display: none
-		left: 0
-		right: 0
-		top: 100%
-		z-index: 100
-		border-top: 0 
-		max-height: 200px
-		overflow-x: hidden
-		overflow-y: auto
-		background: #d9d9d9
-		li
-			padding: 5px 11px 
-			cursor: pointer
-			line-height: 1
-			&:hover
-				background: #717791
-				color: #fff 
+		right: 20px !important
+		top: 50% !important
+		margin-top: -3px !important
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 10px 6px 0 6px
+		border-color: #000 transparent transparent transparent
+	.dropdown-toggle
+		padding: 0 15px !important
+		width: 100%
+		color: $black
+		font-size: 18px
+		text-align: left
+		background: none
+		+pr
+	.btn, .dropdown-toggle, .selectpicker.btn-info
+		border: none !important
+		&:focus
+			border: none !important
+			outline: none !important
+	span, a
+		outline: none !important
+		color: $black !important
+		font-size: 18px
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open>.dropdown-toggle.btn-info
+	top: 0
+	border: none !important
+	outline: none !important
+	background: none !important
+	+box-shadow(inset 0 -5px 0 #d9d9d9 !important)
+
+
 //buy
 .buy
 	.buy__row
@@ -340,6 +345,108 @@ body
 		+svg(g, 35, 32)
 	.soc__ico_mail
 		+svg(mail, 33, 28)
+
+.title
+	font-size: 42px
+	+pb
+//field
+.field
+	&.field_grey
+		background: #f2f2f2
+	.field__top_grey
+		padding: 60px 0 0
+		background: #f2f2f2
+		.title
+			margin-bottom: 40px
+	.field__top
+		margin: 60px 0 40px
+	.btn-top
+		margin-top: 23px
+
+.article
+	margin-bottom: 60px
+	+clr
+	.media-body
+		font-size: 18px
+		p
+			margin-top: 8px
+	.media-heading
+		font-size: 16px
+		color: $blue 
+		+pb
+	img
+		margin-right: 28px
+	.date
+		padding-left: 6px
+		font-size: 16px
+		line-height: 1
+
+
+//tabbable
+.tabbable
+	.nav-tabs
+		border-bottom: none
+	li
+		a
+			padding: 18px !important
+			color: $blue
+			font-size: 18px !important
+			border: none !important
+			border-radius: 0 !important
+			+transition(all 0.2s linear)
+			+pb
+		&:hover,
+		&.active
+			a
+				color: $black !important
+				background: $white !important
+				+box-shadow(inset 0 4px 0 #e5e5e5)
+	.tab-content
+		.article
+			margin-top: 40px
+
+//date
+.date
+	color: #999999
+	line-height: 1
+	vertical-align: top
+	display: inline-block
+
+.reviews-form
+	margin-top: 40px
+.reviewsform__title
+	margin-bottom: 10px
+	color: #222222
+	line-height: 1
+	font-size: 16px
+	+pb
+.reviewsform__area
+	height: 94px !important
+	color: #222222 !important
+	font-size: 18px !important
+	border: 2px solid #bfbfbf !important
+	border-radius: 0 !important
+	resize: none
+.reviewsform__row
+	margin-top: 30px
+.reviewsform__link
+	height: 50px
+	line-height: 50px
+.reviewsform__all
+	color: $blue
+	+pb
+.reviewsform__quantity
+	color: #999999
+.reviewsform__all, .reviewsform__quantity
+	font-size: 18px 
+	line-height: 1
+	vertical-align: middle
+	display: inline-block
+.col-60
+	width: 60px
+	height: 60px
+	margin-right: 28px
+
 
 //nav
 // .nav

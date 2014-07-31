@@ -42,4 +42,9 @@ head.ready(function() {
 
 	// slick
 	$('.slider').slick();
+
+	$('.selectpicker').selectpicker({
+	      style: 'btn-info',
+	      size: 4
+	  });
 });
