@@ -174,6 +174,7 @@ body
 //product
 .product
 	margin-bottom: 60px
+	+clr
 	.slider
 		position: relative
 		margin: 0 0 33px
@@ -362,6 +363,8 @@ body
 		margin: 60px 0 40px
 	.btn-top
 		margin-top: 23px
+	.field__row
+		margin-top: 40px
 
 .article
 	margin-bottom: 60px
@@ -447,27 +450,145 @@ body
 	height: 60px
 	margin-right: 28px
 
+//characteristic
+.characteristic
+	.media-heading
+		color: $black
+		font-size: 20px
+		+pb
+	.media__ico
+		margin-right: 30px !important
+		display: inline-block
+		&.media__ico_1
+			+svg(char_ico2, 60, 60)
+		&.media__ico_2
+			+svg(char_ico1, 60, 60)
+//photo
+.photo
+	.photo__img
+		margin-bottom: 30px
+		img
+			width: 100%
+			display: block
+	.photo__row
+		margin-top: 10px
+
+//brand
+.brand
+	.brand__img
+		padding-bottom: 35px
+		text-align: center
+		img
+			display: inline-block
 
 //nav
-// .nav
-// 	width: 270px
-// 	.nav__item
-// 		height: 60px
-// 		line-height: 60px
-// 		list-style-type: none
-// 		+transition(0.1s)
-// 		&.is-active,
-// 		&:hover
-// 			background: $black
-// 			a
-// 				color: $white
-// 				text-decoration: none
-// 	a
-// 		padding: 0 30px
-// 		color: $blue
-// 		font-size: 26px
-// 		display: block
-// 		+box
-// 		+pb
-// 	.is-fixed
-// 		position: fixed
+.navbar
+	width: 270px
+	.navbar__item
+		height: 60px
+		line-height: 60px
+		list-style-type: none
+		+transition(0.1s)
+	a
+		padding: 0 30px
+		color: $blue
+		font-size: 26px
+		display: block
+		+box
+		+pb
+		&.is-active,
+		&:hover
+			color: $white
+			text-decoration: none
+			background: $black
+	&.is-fixed
+		position: fixed
+		top: 20px
+
+//kate
+.kate
+	margin-bottom: 55px
+	+pb
+	.kate__img
+		margin-bottom: 20px
+		font-size: 18px
+		border: 2px solid #e5e5e5
+		display: block
+		img
+			width: 100%
+			display: block
+	.kate__text, .kate__name
+		color: $blue
+	.kate__name, .kate__prise
+		font-size: 26px
+	.rate__prise-old
+		padding-left: 12px
+		color: #7F7F7F
+		text-decoration: line-through
+		+pr
+
+.discount
+	padding-left: 5px
+	color: #ee4023
+
+//footer
+.footer
+	color: #B2B2B2
+	font-size: 16px
+	overflow: hidden
+	background: #333
+	a
+		color: #B2B2B2
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	p
+		line-height: 1.4
+	.footer_copy
+		padding-left: 5px
+		color: #B2B2B2
+		font-size: 16px
+		display: inline-block
+		+pr
+	.footer__title-1, .footer__title-2
+		padding: 5px 0
+		color: $white
+		display: block
+		+pb
+		&:first-letter
+			text-transform: uppercase
+	.footer__title-1
+		font-size: 16px
+	.footer__title-2
+		font-size: 18px
+	.footer__title-2_inl
+		display: inline-block
+	.footer__item
+		padding: 60px 0 70px 28px
+	.foorer__row
+		margin-bottom: 40px
+	.footer__item_first	
+		padding-bottom: 200px
+		background: #1a1a1a
+	.footer__list
+		li
+			padding: 5px 0
+			a
+				&:hover
+					color: #B2B2B2
+	.soc
+		margin-top: 30px
+		text-align: left
+		li
+			margin-bottom: 24px
+			margin-right: 32px
+		.soc__ico_vk
+			+svg(vk-2, 22, 29)
+		.soc__ico_fb
+			+svg(fb-2, 16, 33)
+		.soc__ico_ins
+			+svg(ins-2, 30, 30)
+		.soc__ico_g
+			+svg(g-2, 35, 33)
+		.soc__ico_mail
+			+svg(mail-2, 33, 28)

@@ -47,4 +47,52 @@ head.ready(function() {
 	      style: 'btn-info',
 	      size: 4
 	  });
+
+	//scroll
+	$(window).scroll(function(){
+		var js_scroll = $(window).scrollTop();
+		if ( js_scroll > 820 ) { 
+			$(".js-top-nav").addClass('is-fixed'); 
+			if(js_scroll > 5480) {
+				$(".js-top-nav").removeClass('is-fixed'); 
+			};
+		}
+		else { 
+			$(".js-top-nav").removeClass('is-fixed'); 
+		};
+	});
+	scroll
+	$(".navbar a, .js-btn-top").click(function (){
+		var page = $(this).attr("href");
+
+		$('html, body').animate({
+			scrollTop: $(page).offset().top + 20
+		}, 600);
+		return false;
+	});
+
+
+	// scroll navbar
+	$(function(){
+		var sections = {},
+			_height  = $(window).height(),
+			i = 0;
+		
+		// Grab positions of our sections 
+		$('.js-field').each(function(){
+			sections[this.id] = $(this).offset().top + 840;
+		});
+
+		$(document).scroll(function(){
+			var $this = $(this),
+				pos = $this.scrollTop();
+				
+			for(i in sections){
+				if(sections[i] > pos && sections[i] < pos + _height){
+					$('a').removeClass('is-active');
+					$('#navbar_' + i).addClass('is-active');
+				}  
+			}
+		});
+	});
 });
