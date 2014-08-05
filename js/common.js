@@ -95,4 +95,8 @@ head.ready(function() {
 			}
 		});
 	});
+
+	$(".js-menu-btn").click(function(){
+		$(".js-menu").slideToggle();
+	});
 });

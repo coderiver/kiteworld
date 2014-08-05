@@ -24,7 +24,7 @@
 				<div class="header__phone">8-800-2000-600</div>
 				<a href="#" class="header__mail">zakaz@kiteworld.ru</a>
 			</div>
-			<ul class="col-md-7 menu navbar-nav navbar-right">
+			<ul class="col-md-7 menu navbar-nav navbar-right js-menu">
 				<li class="menu__item"><a href="#">Магазин</a></li>
 				<li class="menu__item"><a href="#">Новости</a></li>
 				<li class="menu__item"><a href="#">Оборудование</a></li>
@@ -32,6 +32,8 @@
 				<li class="menu__item"><a href="#">Туры</a></li>
 				<li class="menu__item"><a href="#">Корзина</a></li>
 			</ul>
+			<button class="header__ico header__ico_menu js-menu-btn"></button>
+			<button class="header__ico header__ico_basket js-basket-btn"></button>
 		</div>
 		<!-- END container -->
 	</header>
@@ -56,7 +58,7 @@
 		<div class="row">
 			<!-- BEGIN product -->
 			<div class="product">
-				<div class="product__left col-md-6">
+				<div class="product__left col-md-6 col-xs-6">
 					<!-- BEGIN slider slick -->
 					<div class="slider">
 						<div><a href="#"><img src="img/img1.png" alt="img"></a></div>
@@ -79,7 +81,7 @@
 					</ul>
 					<!-- END soc -->
 				</div>
-				<div class="product__right col-md-6">
+				<div class="product__right col-md-6 col-xs-6">
 					<h3 class="product__title">Кайт 2013 North Vegas Limited Edition 12м²</h3>
 					<!-- BEGIN characteristics -->
 					<div class="characteristics">
@@ -166,7 +168,7 @@
 							<li class="navbar__item"><a id="navbar_brand" href="#brand">О бренде</a></li>
 						</div>
 					</div>
-					<div class="field col-xs-12 col-md-9 js-field" id="description">
+					<div class="field col-xs-8 col-md-9 js-field pull-right" id="description">
 						<!-- BEGIN description -->
 						<div class="row description">
 							<div class="field__top col-xs-12">
@@ -201,17 +203,32 @@
 				<!-- BEGIN container -->
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-12 col-md-9 pull-right">
+						<div class="col-xs-8 col-md-9 pull-right">
 							<div class="title pull-left">Обзоры продукта</div>
 							<a href="#top" class="btn-top pull-right js-btn-top"></a>
 						</div> 
 					</div>
 					<div class="row">
-						<div class="col-xs-12 col-md-9 pull-right">
+						<div class="col-xs-8 col-md-9 pull-right">
 							<ul class="nav nav-tabs">  
-								<li class="active"><a href="#s1" data-toggle="tab">Обзор KiteWorld</a></li>  
-								<li><a href="#s2" data-toggle="tab">Обзор школы на Боракае</a></li>  
-								<li><a href="#s3" data-toggle="tab">Отчёт Пети Тюшкевича</a></li>  
+								<li class="active">
+									<a href="#s1" data-toggle="tab">
+										<span class="nav__text1">Обзор KiteWorld</span>
+										<span class="nav__text2">KiteWorld</span>
+									</a>
+								</li>  
+								<li>
+									<a href="#s2" data-toggle="tab">
+										<span class="nav__text1">Обзор школы на Боракае</span>
+										<span class="nav__text2">Школа на Боракае</span>
+									</a>
+								</li>  
+								<li>
+									<a href="#s3" data-toggle="tab">
+										<span class="nav__text1">Отчёт Пети Тюшкевича</span>
+										<span class="nav__text2">П. Тюшкевич</span>
+									</a>
+								</li>  
 							</ul> 
 						</div>
 					</div>
@@ -223,7 +240,7 @@
 				<!-- BEGIN row -->
 				<div class="row">
 					<div class="col-xs-3"></div>
-					<div class="col-xs-12 col-md-9">
+					<div class="col-xs-8 col-md-9 pull-right">
 						<div class="tab-content">  
 							<div class="tab-pane active" id="s1">  
 								<div class="row">
@@ -290,7 +307,7 @@
 			<div class="container">
 				<!-- BEGIN row -->
 				<div class="row">
-					<div class="field col-xs-12 col-md-9 pull-right">
+					<div class="field col-xs-8 col-md-9 pull-right">
 						<!-- BEGIN reviews-->
 						<div class="row reviews">
 							<div class="field__top col-xs-12">
@@ -368,7 +385,7 @@
 			<div class="container">
 				<!-- BEGIN characteristics -->
 				<div class="row characteristic">
-					<div class="field col-xs-12 col-md-9 pull-right">
+					<div class="field col-xs-8 col-md-9 pull-right">
 						<!-- BEGIN reviews-->
 						<div class="row reviews">
 							<div class="field__top col-xs-12">
@@ -390,7 +407,7 @@
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="media">
+										<div class="media media_resp">
 											<i class="media__ico media__ico_1 pull-left"></i>
 											<div class="media-body">
 												<h4 class="media-heading">Фристайл на крюке</h4>
@@ -414,7 +431,7 @@
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="media">
+										<div class="media media_resp">
 											<i class="media__ico media__ico_2 pull-left"></i>
 											<div class="media-body">
 												<h4 class="media-heading">Пятая стропа</h4>
@@ -442,7 +459,7 @@
 			<div class="container">
 				<!-- BEGIN row -->
 				<div class="row video">
-					<div class="field col-xs-12 col-md-9 pull-right">
+					<div class="field col-xs-8 col-md-9 pull-right">
 						<!-- BEGIN video-->
 						<div class="row video">
 							<div class="field__top col-xs-12">
@@ -472,7 +489,7 @@
 			<div class="container">
 				<!-- BEGIN row -->
 				<div class="row">
-					<div class="field col-xs-12 col-md-9 pull-right">
+					<div class="field col-xs-8 col-md-9 pull-right">
 						<!-- BEGIN photo-->
 						<div class="row photo">
 							<div class="field__top col-xs-12">
@@ -482,30 +499,30 @@
 							<!-- BEGIN article -->
 							<div class="article col-xs-12">
 								<div class="row">
-									<div class="photo__img col-md-3">
+									<div class="photo__img col-md-3 col-xs-3">
 										<img src="http://placehold.it/150x150" alt="img">
 									</div>
-									<div class="photo__img col-md-3">
+									<div class="photo__img col-md-3 col-xs-3">
 										<img src="http://placehold.it/150x150" alt="img">
 									</div>
-									<div class="photo__img col-md-3">
+									<div class="photo__img col-md-3 col-xs-3">
 										<img src="http://placehold.it/150x150" alt="img">
 									</div>
-									<div class="photo__img col-md-3">
+									<div class="photo__img col-md-3 col-xs-3">
 										<img src="http://placehold.it/150x150" alt="img">
 									</div>
 								</div>
 								<div class="row">
-									<div class="photo__img col-md-3">
+									<div class="photo__img col-md-3 col-xs-3">
 										<img src="http://placehold.it/150x150" alt="img">
 									</div>
-									<div class="photo__img col-md-3">
+									<div class="photo__img col-md-3 col-xs-3">
 										<img src="http://placehold.it/150x150" alt="img">
 									</div>
-									<div class="photo__img col-md-3">
+									<div class="photo__img col-md-3 col-xs-3">
 										<img src="http://placehold.it/150x150" alt="img">
 									</div>
-									<div class="photo__img col-md-3">
+									<div class="photo__img col-md-3 col-xs-3">
 										<img src="http://placehold.it/150x150" alt="img">
 									</div>
 								</div>
@@ -527,7 +544,7 @@
 			<div class="container">
 				<!-- BEGIN row -->
 				<div class="row">
-					<div class="field col-xs-12 col-md-9 pull-right">
+					<div class="field col-xs-8 col-md-9 pull-right">
 						<!-- BEGIN brand-->
 						<div class="row brand">
 							<div class="field__top col-xs-12">
@@ -571,43 +588,43 @@
 						<div class="title pull-left">Другие кайты North</div>
 						<a href="#top" class="btn-top pull-right js-btn-top"></a>
 					</div>
-					<div class="col-md-3 kate">
+					<div class="col-md-3 col-xs-4 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del></div>
 					</div>
-					<div class="col-md-3 kate">
+					<div class="col-md-3 col-xs-4 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del></div>
 					</div>
-					<div class="col-md-3 kate">
+					<div class="col-md-3 col-xs-4 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del></div>
 					</div>
-					<div class="col-md-3 kate">
+					<div class="col-md-3 col-xs-4 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del><span class="rate__prise-old">48000 <del>P</del></span></div>
 					</div>
-					<div class="col-md-3 kate">
+					<div class="col-md-3 col-xs-4 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del></div>
 					</div>
-					<div class="col-md-3 kate">
+					<div class="col-md-3 col-xs-4 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del></div>
 					</div>
-					<div class="col-md-3 kate">
+					<div class="col-md-3 col-xs-4 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
@@ -633,43 +650,43 @@
 							<div class="title pull-left">Другие кайты North</div>
 							<a href="#top" class="btn-top pull-right js-btn-top"></a>
 						</div>
-						<div class="col-md-3 kate">
+						<div class="col-md-3 col-xs-4 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del></div>
 						</div>
-						<div class="col-md-3 kate">
+						<div class="col-md-3 col-xs-4 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del></div>
 						</div>
-						<div class="col-md-3 kate">
+						<div class="col-md-3 col-xs-4 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del></div>
 						</div>
-						<div class="col-md-3 kate">
+						<div class="col-md-3 col-xs-4 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del><span class="rate__prise-old">48000 <del>P</del></span></div>
 						</div>
-						<div class="col-md-3 kate">
+						<div class="col-md-3 col-xs-4 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del></div>
 						</div>
-						<div class="col-md-3 kate">
+						<div class="col-md-3 col-xs-4 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del></div>
 						</div>
-						<div class="col-md-3 kate">
+						<div class="col-md-3 col-xs-4 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
@@ -691,7 +708,7 @@
 			<!-- BEGIN row -->
 			<div class="row">
 				<div class="col-md-2 footer__item footer__item_first">
-					<div class="footer__title-1">магазин<div class="footer_copy">&copy; 2014</div></div>
+					<div class="footer__title-1">Kiteworld<div class="footer_copy">&copy; 2014</div></div>
 					<p>Интернет-магазин товаров для кайтбординга, кайтсерфинга, сноукайтинга и других водных видов спорта.</p>
 					<a href="#" class="footer__title-1">О магазине</a>
 					<a href="#" class="footer__title-1">Контакты</a>
