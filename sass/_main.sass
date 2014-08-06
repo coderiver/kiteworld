@@ -1,2 +1,52 @@
 // Normally mainpage styles
- 
+//category
+
+//topic
+.topic
+	font-size: 42px
+	line-height: 1.1
+	background: url(../img/topic-bg-right.png) no-repeat 100% 0, url(../img/topic-bg-left.png) no-repeat 0 0 
+	background-size: contain
+	+pb
+	.container
+		padding: 60px 90px 60px 30px
+
+.category
+	font-size: 0
+	.category__item
+		position: relative
+		width: 20%
+		display: inline-block
+		img
+			width: 100%
+			opacity: 0.8
+			display: block
+	.category__link
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		font-size: 30px !important
+		text-transform: uppercase
+		color: $white
+		display: inline-block
+		+vertical
+		span
+			line-height: 1.1
+			display: inline-block
+			vertical-align: middle
+	.category__item_lime
+		background: #a1ba00
+	.category__item_light-green
+		background: #007a5b
+	.category__item_blue
+		background: #2852af
+	.category__item_light-blue
+		background: #28a2b0
+	.category__item_green
+		background: #2f7900
+	.category__item_azure
+		background: #0078ff
+	.category__item_red
+		background: #b4001a

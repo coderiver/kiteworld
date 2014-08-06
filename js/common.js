@@ -25,20 +25,41 @@ head.ready(function() {
 				}
 				event.stopPropagation();
 			});
-			$("body").on("click", ".js-select-list li", function(event){
+			$("body").on("click", ".js-select-list li a", function(event){
 				var id = $(this).attr("data-id");
 				var text = $(this).text();
 				$(this).parents(".js-select").find(".js-select-text").text(text);
 				$(this).parents(".js-select").find(".js-select-input").val(id);
-				$(this).parent().hide();
+				$(this).parent().parent().hide();
 				$(this).parents(".js-select").removeClass("is-active");
 				event.stopPropagation();
+				return false;
 			});
 		}  
 		selectList();
 		$("body").on("click", ".js-select", function(event){
 			event.stopPropagation();
 	});
+
+	function tab() {
+		$(".js-tab").each(function(){
+			var tab_link = $(this).find("a");
+			var tab_item = $(this).find("li");
+			var tab_cont = $(this).parents(".js-tab-group").find(".tab-pane");
+			tab_cont.hide();
+			tab_item.first().addClass("active");
+			$(this).parents(".js-tab-group").find(".js-tab1").show();
+			tab_link.on("click", function() {
+				var index = $(this).attr("href");
+				tab_item.removeClass("active");
+				$(this).parent().addClass("active");
+				tab_cont.hide();
+				$(this).parents(".js-tab-group").find("."+index).show();
+				//return false;
+			});
+		});
+	}
+	tab();
 
 	// slick
 	$('.slider').slick();

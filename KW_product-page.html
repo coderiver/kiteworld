@@ -58,7 +58,7 @@
 		<div class="row">
 			<!-- BEGIN product -->
 			<div class="product">
-				<div class="product__left col-md-6 col-xs-6">
+				<div class="product__left col-md-6 col-sm-6 col-xs-12">
 					<!-- BEGIN slider slick -->
 					<div class="slider">
 						<div><a href="#"><img src="img/img1.png" alt="img"></a></div>
@@ -72,7 +72,7 @@
 					</div>
 					<!-- END slider slick -->
 					<!-- BEGIN soc -->
-					<ul class="product__soc soc">
+					<ul class="product__soc soc hidden-xs">
 						<li><a href="#" class="soc__ico soc__ico_vk"></a></li>
 						<li><a href="#" class="soc__ico soc__ico_fb"></a></li>
 						<li><a href="#" class="soc__ico soc__ico_ins"></a></li>
@@ -81,7 +81,7 @@
 					</ul>
 					<!-- END soc -->
 				</div>
-				<div class="product__right col-md-6 col-xs-6">
+				<div class="product__right col-md-6 col-sm-6 col-xs-12">
 					<h3 class="product__title">Кайт 2013 North Vegas Limited Edition 12м²</h3>
 					<!-- BEGIN characteristics -->
 					<div class="characteristics">
@@ -157,7 +157,7 @@
 			<div class="container">
 				<!-- BEGIN row -->
 				<div class="row">
-					<div class="col-xs-3">
+					<div class="col-xs-3 hidden-xs">
 						<div class="navbar js-top-nav">
 							<li class="navbar__item"><a id="navbar_description" class="is-active" href="#description">Описание</a></li>
 							<li class="navbar__item"><a id="navbar_overview" href="#overview">Обзоры</a></li>
@@ -168,7 +168,7 @@
 							<li class="navbar__item"><a id="navbar_brand" href="#brand">О бренде</a></li>
 						</div>
 					</div>
-					<div class="field col-xs-8 col-md-9 js-field pull-right" id="description">
+					<div class="field col-md-9 col-sm-8 col-xs-12 js-field pull-right" id="description">
 						<!-- BEGIN description -->
 						<div class="row description">
 							<div class="field__top col-xs-12">
@@ -198,19 +198,19 @@
 		</div>
 		<!-- END field -->
 		<!-- BEGIN overview -->
-		<div class="field tabbable overview js-field" id="overview">
+		<div class="field js-tab-group tabbable overview js-field" id="overview">
 			<div class="field__top field__top_grey">
 				<!-- BEGIN container -->
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-8 col-md-9 pull-right">
+						<div class="col-md-9 col-sm-8 col-xs-12 pull-right">
 							<div class="title pull-left">Обзоры продукта</div>
-							<a href="#top" class="btn-top pull-right js-btn-top"></a>
+							<a href="#top" class="btn-top btn-top_mod pull-right js-btn-top"></a>
 						</div> 
 					</div>
 					<div class="row">
 						<div class="col-xs-8 col-md-9 pull-right">
-							<ul class="nav nav-tabs">  
+							<ul class="nav nav-tabs hidden-xs">  
 								<li class="active">
 									<a href="#s1" data-toggle="tab">
 										<span class="nav__text1">Обзор KiteWorld</span>
@@ -239,10 +239,24 @@
 			<div class="container">
 				<!-- BEGIN row -->
 				<div class="row">
-					<div class="col-xs-3"></div>
-					<div class="col-xs-8 col-md-9 pull-right">
+					<div class="col-md-9 col-sm-8 col-xs-12 pull-right">
+						<div class="select-2 js-select">
+						    <span class="select__text js-select-text">KiteWorld</span>
+						    <input type="hidden" class="js-select-input" value="0">
+						    <ul class="select__list js-tab js-select-list">
+						        <li class="is-active">
+						        	<a href="js-tab1" data-id="0">KiteWorld</a>
+						        </li>
+						        <li>
+						        	<a href="js-tab2" data-id="1">Школа на Боракае</a>
+						        </li>
+						        <li>
+						        	<a href="js-tab3" data-id="2">П. Тюшкевич</a>
+						        </li>
+						    </ul>
+						</div>
 						<div class="tab-content">  
-							<div class="tab-pane active" id="s1">  
+							<div class="tab-pane active js-tab1" id="s1">  
 								<div class="row">
 									<!-- BEGIN article -->
 									<div class="article">
@@ -259,7 +273,7 @@
 									<!-- END article -->
 								</div> 
 							</div>  
-							<div class="tab-pane" id="s2">  
+							<div class="tab-pane js-tab2" id="s2">  
 								<div class="row">
 									<!-- BEGIN article -->
 									<div class="article">
@@ -276,7 +290,7 @@
 									<!-- END article -->
 								</div>
 							</div>  
-							<div class="tab-pane" id="s3">  
+							<div class="tab-pane js-tab3" id="s3">  
 								<div class="row">
 									<!-- BEGIN article -->
 									<div class="article">
@@ -307,7 +321,7 @@
 			<div class="container">
 				<!-- BEGIN row -->
 				<div class="row">
-					<div class="field col-xs-8 col-md-9 pull-right">
+					<div class="field col-md-9 col-sm-8 col-xs-12 pull-right">
 						<!-- BEGIN reviews-->
 						<div class="row reviews">
 							<div class="field__top col-xs-12">
@@ -323,9 +337,9 @@
 									<div class="media-body">
 										<h4 class="media-heading pull-left">Anna Bichevskaya</h4>
 										<div class="date">• 21 Декабря 2013 в 12:45</div>
-										<p>
+										<div class="media-text">
 											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eos incidunt expedita, tempore molestiae architecto totam, tempora atque similique in animi numquam eveniet enim eligendi autem nisi! Natus, explicabo, recusandae!
-										</p>
+										</div>
 									</div>
 								</div>
 								<div class="media">
@@ -335,9 +349,9 @@
 									<div class="media-body">
 										<h4 class="media-heading pull-left">Anna Bichevskaya</h4>
 										<div class="date">• 21 Декабря 2013 в 12:45</div>
-										<p>
+										<div class="media-text">
 											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eveniet cupiditate suscipit laboriosam totam! Consectetur rerum quidem recusandae accusantium nisi corrupti molestias voluptas. Consequatur, iusto doloremque nostrum nihil eum in.
-										</p>
+										</div>
 									</div>
 								</div>
 								<div class="media">
@@ -347,24 +361,24 @@
 									<div class="media-body">
 										<h4 class="media-heading pull-left">Anna Bichevskaya</h4>
 										<div class="date">• 21 Декабря 2013 в 12:45</div>
-										<p>
+										<div class="media-text">
 											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore a odit, dicta, consequuntur rerum voluptate amet aspernatur veritatis eos repudiandae laboriosam perspiciatis qui exercitationem molestiae quo labore totam voluptatem! Mollitia.
-										</p>
+										</div>
 									</div>
 								</div>
 								<div class="media">
 									<a class="pull-left" href="#">
-										<div class="col-60 pull-left"></div>
+										<div class="col-60 pull-left hidden-xs"></div>
 									</a>
 									<div class="reviewsform media-body">
 										<div class="reviewsform__title">Ваш отзыв</div>
 										<textarea class="reviewsform__area form-control" rows="3"></textarea>
 										<div class="reviewsform__row">
-											<div class="reviewsform__link pull-left">
+											<div class="reviewsform__link pull-left hidden-xs">
 												<a href="#" class="reviewsform__all">Читать все отзывы</a>
 												<span class="reviewsform__quantity">(12)</span>
 											</div>
-											<button class="btn btn_blue pull-right">Оставить отзыв</button>
+											<button class="btn btn_blue col-xs-12 pull-right">Оставить отзыв</button>
 										</div>
 									</div>
 								</div>
@@ -385,7 +399,7 @@
 			<div class="container">
 				<!-- BEGIN characteristics -->
 				<div class="row characteristic">
-					<div class="field col-xs-8 col-md-9 pull-right">
+					<div class="field col-md-9 col-sm-8 col-xs-12 pull-right">
 						<!-- BEGIN reviews-->
 						<div class="row reviews">
 							<div class="field__top col-xs-12">
@@ -454,12 +468,12 @@
 		</div>
 		<!-- END field -->
 		<!-- BEGIN field -->
-		<div class="field field_grey js-field" id="video">
+		<div class="field field_grey js-field hidden-xs" id="video">
 			<!-- BEGIN container -->
 			<div class="container">
 				<!-- BEGIN row -->
 				<div class="row video">
-					<div class="field col-xs-8 col-md-9 pull-right">
+					<div class="field col-md-9 col-sm-8 col-xs-12 pull-right">
 						<!-- BEGIN video-->
 						<div class="row video">
 							<div class="field__top col-xs-12">
@@ -484,12 +498,12 @@
 		</div>
 		<!-- END field -->
 		<!-- BEGIN field -->
-		<div class="field js-field" id="photo">
+		<div class="field js-field hidden-xs" id="photo">
 			<!-- BEGIN container -->
 			<div class="container">
 				<!-- BEGIN row -->
 				<div class="row">
-					<div class="field col-xs-8 col-md-9 pull-right">
+					<div class="field col-md-9 col-sm-8 col-xs-12 pull-right">
 						<!-- BEGIN photo-->
 						<div class="row photo">
 							<div class="field__top col-xs-12">
@@ -539,12 +553,12 @@
 		</div>
 		<!-- END field -->
 		<!-- BEGIN field -->
-		<div class="field field_grey js-field" id="brand">
+		<div class="field field_grey js-field hidden-xs" id="brand">
 			<!-- BEGIN container -->
 			<div class="container">
 				<!-- BEGIN row -->
 				<div class="row">
-					<div class="field col-xs-8 col-md-9 pull-right">
+					<div class="field col-md-9 col-sm-8 col-xs-12 pull-right">
 						<!-- BEGIN brand-->
 						<div class="row brand">
 							<div class="field__top col-xs-12">
@@ -588,43 +602,43 @@
 						<div class="title pull-left">Другие кайты North</div>
 						<a href="#top" class="btn-top pull-right js-btn-top"></a>
 					</div>
-					<div class="col-md-3 col-xs-4 kate">
+					<div class="col-md-3 col-sm-4 col-xs-12 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del></div>
 					</div>
-					<div class="col-md-3 col-xs-4 kate">
+					<div class="col-md-3 col-sm-4 col-xs-12 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del></div>
 					</div>
-					<div class="col-md-3 col-xs-4 kate">
+					<div class="col-md-3 col-sm-4 col-xs-12 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del></div>
 					</div>
-					<div class="col-md-3 col-xs-4 kate">
+					<div class="col-md-3 col-sm-4 col-xs-12 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del><span class="rate__prise-old">48000 <del>P</del></span></div>
 					</div>
-					<div class="col-md-3 col-xs-4 kate">
+					<div class="col-md-3 col-sm-4 col-xs-12 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del></div>
 					</div>
-					<div class="col-md-3 col-xs-4 kate">
+					<div class="col-md-3 col-sm-4 col-xs-12 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
 						<div class="kate__prise">от 46000 <del>P</del></div>
 					</div>
-					<div class="col-md-3 col-xs-4 kate">
+					<div class="col-md-3 col-sm-4 col-xs-12 kate">
 						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 						<div class="kate__text">North</div>
 						<div class="kate__name">Dice ‘14</div>
@@ -650,43 +664,43 @@
 							<div class="title pull-left">Другие кайты North</div>
 							<a href="#top" class="btn-top pull-right js-btn-top"></a>
 						</div>
-						<div class="col-md-3 col-xs-4 kate">
+						<div class="col-md-3 col-sm-4 col-xs-12 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del></div>
 						</div>
-						<div class="col-md-3 col-xs-4 kate">
+						<div class="col-md-3 col-sm-4 col-xs-12 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del></div>
 						</div>
-						<div class="col-md-3 col-xs-4 kate">
+						<div class="col-md-3 col-sm-4 col-xs-12 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del></div>
 						</div>
-						<div class="col-md-3 col-xs-4 kate">
+						<div class="col-md-3 col-sm-4 col-xs-12 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del><span class="rate__prise-old">48000 <del>P</del></span></div>
 						</div>
-						<div class="col-md-3 col-xs-4 kate">
+						<div class="col-md-3 col-sm-4 col-xs-12 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del></div>
 						</div>
-						<div class="col-md-3 col-xs-4 kate">
+						<div class="col-md-3 col-sm-4 col-xs-12 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
 							<div class="kate__prise">от 46000 <del>P</del></div>
 						</div>
-						<div class="col-md-3 col-xs-4 kate">
+						<div class="col-md-3 col-sm-4 col-xs-12 kate">
 							<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
 							<div class="kate__text">North</div>
 							<div class="kate__name">Dice ‘14</div>
@@ -707,105 +721,121 @@
 		<div class="container">
 			<!-- BEGIN row -->
 			<div class="row">
-				<div class="col-md-2 footer__item footer__item_first">
+				<!-- <div class="footer__right"> -->
+					<div class="col-sm-6 col-xs-12 footer__item footer__item_visible">
+						<div class="footer__row">
+							<a href="#" class="footer__title-2">Магазин</a>
+							<ul class="footer__list">
+								<li><a href="#">Поясные</a></li>
+								<li><a href="#">Сидячие</a></li>
+								<li><a href="#">Комби</a></li>
+								<li><a href="#">Сноукайтборды</a></li>
+								<li><a href="#">Сноуборды</a></li>
+								<li><a href="#">Крепления</a></li>
+								<li><a href="#">Ботинки</a></li>
+								<li><a href="#">Защита</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-6 col-xs-12 footer__item footer__item_right">
+						<a href="#" class="footer__title-2">Новости</a>
+						<a href="#" class="footer__title-2">Оборудование</a>
+						<a href="#" class="footer__title-2">Школа</a>
+						<a href="#" class="footer__title-2">Туры</a>
+						<a href="#" class="footer__title-2">Стол заказов</a>
+						<a href="#" class="footer__title-2">Контакты</a>
+						<!-- BEGIN soc -->
+						<ul class="footer__soc soc">
+							<li><a href="#" class="soc__ico soc__ico_vk"></a></li>
+							<li><a href="#" class="soc__ico soc__ico_fb"></a></li>
+							<li><a href="#" class="soc__ico soc__ico_ins"></a></li>
+							<li><a href="#" class="soc__ico soc__ico_g"></a></li>
+							<li><a href="#" class="soc__ico soc__ico_mail"></a></li>
+						</ul>
+						<!-- END soc -->
+					</div>
+					<div class="col-md-2 footer__item footer__item_hidden">
+						<div class="footer__row">
+							<a href="#" class="footer__title-2">Защита</a>
+							<ul class="footer__list">
+								<li><a href="#">Для воды</a></li>
+								<li><a href="#">Для суши</a></li>
+								<li><a href="#">Падлборды</a></li>
+								<li><a href="#">Индоборды</a></li>
+							</ul>
+						</div>
+						<div class="footer__row">
+							<a href="#" class="footer__title-2">Одежда</a>
+							<ul class="footer__list">
+								<li><a href="#">Летняя</a></li>
+								<li><a href="#">Зимняя</a></li>
+								<li><a href="#">Очки</a></li>
+							</ul>
+						</div>
+						<a href="#" class="footer__title-2">Аксессуары</a>
+						<p><a href="#" class="footer__title-2 footer__title-2_inl">Распродажа</a><span class="discount">-65%</span></p>
+					</div>
+					<div class="col-md-2 footer__item footer__item_hidden">
+						<a href="#" class="footer__title-2">Гидроодежда</a>
+						<ul class="footer__list">
+							<li><a href="#">Гидрокостюмы мокрые длинные</a></li>
+							<li><a href="#">Гидрокостюмы мокрые короткие</a></li>
+							<li><a href="#">Гидрокостюмы сухие</a></li>
+							<li><a href="#">Гидроботинки <br>и гидроноски</a></li>
+							<li><a href="#">Перчатки</a></li>
+							<li><a href="#">Гидрошапки</a></li>
+							<li><a href="#">Лайкры неопреновые</a></li>
+							<li><a href="#">Плащи, штаны</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2 footer__item footer__item_hidden">
+						<div class="footer__row">
+							<a href="#" class="footer__title-2">Трапеции</a>
+							<ul class="footer__list">
+								<li><a href="#">Поясные</a></li>
+								<li><a href="#">Сидячие</a></li>
+								<li><a href="#">Комби</a></li>
+							</ul>
+						</div>
+						<div class="footer__row">
+							<a href="#" class="footer__title-2">Сноукайтборды<br>и аксессуары</a>
+							<ul class="footer__list">
+								<li><a href="#">Сноукайтборды</a></li>
+								<li><a href="#">Сноуборды</a></li>
+								<li><a href="#">Крепления</a></li>
+								<li><a href="#">Ботинки</a></li>
+								<li><a href="#">Защита</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-2 footer__item footer__item_hidden">
+						<div class="footer__row">
+							<a href="#" class="footer__title-2">Кайты</a>
+							<ul class="footer__list">
+								<li><a href="#">Надувные </a></li>
+								<li><a href="#">Парафойлы</a></li>
+								<li><a href="#">Комплекты</a></li>
+								<li><a href="#">Пилотажки</a></li>
+								<li><a href="#">Планки</a></li>
+							</ul>
+						</div>
+						<div class="footer__row">
+							<a href="#" class="footer__title-2">Кайтборды<br>и аксессуары</a>
+							<ul class="footer__list">
+								<li><a href="#">Кайтборды</a></li>
+								<li><a href="#">Падсы, стрепы,<br>плавники</a></li>
+								<li><a href="#">Ботинки</a></li>
+							</ul>
+						</div>
+					</div>
+				<!-- </div> -->
+				<div class="col-md-2 col-xs-12 footer__item footer__item_first">
 					<div class="footer__title-1">Kiteworld<div class="footer_copy">&copy; 2014</div></div>
 					<p>Интернет-магазин товаров для кайтбординга, кайтсерфинга, сноукайтинга и других водных видов спорта.</p>
-					<a href="#" class="footer__title-1">О магазине</a>
-					<a href="#" class="footer__title-1">Контакты</a>
-					<div class="footer__title-1">8 800 200 6000</div>
-					<a href="#" class="footer__title-1">mail@kiteworld.ru</a>
-				</div>
-				<div class="col-md-2 footer__item">
-					<div class="footer__row">
-						<a href="#" class="footer__title-2">Кайты</a>
-						<ul class="footer__list">
-							<li><a href="#">Надувные </a></li>
-							<li><a href="#">Парафойлы</a></li>
-							<li><a href="#">Комплекты</a></li>
-							<li><a href="#">Пилотажки</a></li>
-							<li><a href="#">Планки</a></li>
-						</ul>
-					</div>
-					<div class="footer__row">
-						<a href="#" class="footer__title-2">Кайтборды<br>и аксессуары</a>
-						<ul class="footer__list">
-							<li><a href="#">Кайтборды</a></li>
-							<li><a href="#">Падсы, стрепы,<br>плавники</a></li>
-							<li><a href="#">Ботинки</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-2 footer__item">
-					<div class="footer__row">
-						<a href="#" class="footer__title-2">Трапеции</a>
-						<ul class="footer__list">
-							<li><a href="#">Поясные</a></li>
-							<li><a href="#">Сидячие</a></li>
-							<li><a href="#">Комби</a></li>
-						</ul>
-					</div>
-					<div class="footer__row">
-						<a href="#" class="footer__title-2">Сноукайтборды<br>и аксессуары</a>
-						<ul class="footer__list">
-							<li><a href="#">Сноукайтборды</a></li>
-							<li><a href="#">Сноуборды</a></li>
-							<li><a href="#">Крепления</a></li>
-							<li><a href="#">Ботинки</a></li>
-							<li><a href="#">Защита</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-2 footer__item">
-					<a href="#" class="footer__title-2">Гидроодежда</a>
-					<ul class="footer__list">
-						<li><a href="#">Гидрокостюмы мокрые длинные</a></li>
-						<li><a href="#">Гидрокостюмы мокрые короткие</a></li>
-						<li><a href="#">Гидрокостюмы сухие</a></li>
-						<li><a href="#">Гидроботинки <br>и гидроноски</a></li>
-						<li><a href="#">Перчатки</a></li>
-						<li><a href="#">Гидрошапки</a></li>
-						<li><a href="#">Лайкры неопреновые</a></li>
-						<li><a href="#">Плащи, штаны</a></li>
-					</ul>
-				</div>
-				<div class="col-md-2 footer__item">
-					<div class="footer__row">
-						<a href="#" class="footer__title-2">Защита</a>
-						<ul class="footer__list">
-							<li><a href="#">Для воды</a></li>
-							<li><a href="#">Для суши</a></li>
-							<li><a href="#">Падлборды</a></li>
-							<li><a href="#">Индоборды</a></li>
-						</ul>
-					</div>
-					<div class="footer__row">
-						<a href="#" class="footer__title-2">Одежда</a>
-						<ul class="footer__list">
-							<li><a href="#">Летняя</a></li>
-							<li><a href="#">Зимняя</a></li>
-							<li><a href="#">Очки</a></li>
-						</ul>
-					</div>
-					<a href="#" class="footer__title-2">Аксессуары</a>
-					<p><a href="#" class="footer__title-2 footer__title-2_inl">Распродажа</a><span class="discount">-65%</span></p>
-					
-				</div>
-				<div class="col-md-2 footer__item">
-					<a href="#" class="footer__title-2">Новости</a>
-					<a href="#" class="footer__title-2">Оборудование</a>
-					<a href="#" class="footer__title-2">Школа</a>
-					<a href="#" class="footer__title-2">Туры</a>
-					<a href="#" class="footer__title-2">Стол заказов</a>
-					<a href="#" class="footer__title-2">Контакты</a>
-					<!-- BEGIN soc -->
-					<ul class="footer__soc soc">
-						<li><a href="#" class="soc__ico soc__ico_vk"></a></li>
-						<li><a href="#" class="soc__ico soc__ico_fb"></a></li>
-						<li><a href="#" class="soc__ico soc__ico_ins"></a></li>
-						<li><a href="#" class="soc__ico soc__ico_g"></a></li>
-						<li><a href="#" class="soc__ico soc__ico_mail"></a></li>
-					</ul>
-					<!-- END soc -->
+					<a href="#" class="footer__title-1 about">О магазине</a>
+					<a href="#" class="footer__title-1 contacts">Контакты</a>
+					<div class="footer__title-1 phone">8 800 200 6000</div>
+					<a href="#" class="footer__title-1 mail">mail@kiteworld.ru</a>
 				</div>
 			</div>
 			<!-- END row -->
