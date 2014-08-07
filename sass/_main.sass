@@ -11,27 +11,34 @@
 	.container
 		padding: 60px 90px 60px 30px
 
+//category
 .category
 	font-size: 0
 	.category__item
 		position: relative
 		width: 20%
+		overflow: hidden
 		display: inline-block
+		+transition(all 0.2s linear)
+		&:hover
+			img
+				opacity: 1
 		img
 			width: 100%
-			opacity: 0.8
+			opacity: 0.7
 			display: block
+			+transition(all 0.2s linear)
 	.category__link
 		position: absolute
 		top: 0
 		left: 0
 		height: 100%
 		width: 100%
-		font-size: 30px !important
 		text-transform: uppercase
 		color: $white
 		display: inline-block
 		+vertical
+		font-size: 30px
 		span
 			line-height: 1.1
 			display: inline-block
@@ -50,3 +57,125 @@
 		background: #0078ff
 	.category__item_red
 		background: #b4001a
+
+//clause
+.clause
+	padding: 60px 0 30px
+	font-size: 0
+	+clr
+	.title
+		padding-bottom: 25px
+	.clause__item
+		float: none
+		margin-bottom: 35px 
+		color: $blue
+		vertical-align: top 
+		text-decoration: none
+		display: inline-block
+	.clause__row
+		margin: 10px 0
+	.clause__top
+		position: relative
+		margin-bottom: 20px
+		overflow: hidden
+		display: block
+		&:hover
+			background: #000
+			.clause__play
+				background: #cc181e
+			img
+				opacity: .95
+		img
+			width: 100%
+			display: block
+		.clause__play
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -24px 0 0 -32px
+			width: 65px
+			height: 48px
+			background: #1d1d1d
+			+border-radius(8px)
+			&:before
+				position: absolute
+				content: ""
+				top: 50%
+				left: 50%
+				margin: -9px 0 0 -4px
+				+arr(15, 19, $white, r)
+		.clause__die
+			position: absolute
+			bottom: -17%
+			right: -70%
+			height: 34%
+			width: 142%
+			background: #4a99ce
+			+rotate(-16)
+		.clause__text
+			position: absolute
+			top: 0
+			left: 0
+			height: 35%
+			width: 100%
+			color: $white
+			display: inline-block
+			+vertical
+			&:first-letter
+				text-transform: uppercase
+		.clause__country
+			font-size: 32px
+		.clause__city
+			font-size: 20px
+		.clause__price
+			font-size: 24px
+	.clause__name, .clause__title, .clause__country
+		+pb
+	.clause__text, .clause__city, .clause__price
+		+pl
+	.clause__name
+		font-size: 16px
+	.clause__title
+		font-size: 24px
+		line-height: 1.1
+	.clause__text
+		font-size: 18px
+		color: $black
+		&.clause__text_price
+			padding-top: 15px
+	&.clause_news
+		.clause__name
+			font-size: 20px
+		.clause__title
+			font-size: 32px
+		.clause__text
+			font-size: 18px
+	&.clause_school
+		background: #f2f2f2
+	&.clause_tour
+		.clause__country
+			font-size: 48px
+
+//max-width: 992
+@media screen and (max-width: 992px)
+	.category
+		.category__item
+			width: 50%
+			height: 127px
+			text-align: right
+			img
+				float: right
+				height: 100%
+				width: auto
+		.category__link
+			padding-left: 17px
+			text-align: left
+	.clause
+		.clause__top
+			.clause__country
+				font-size: 32px
+//max-width: 768
+@media screen and (max-width: 768px)
+	.category
+		.category__item
+			width: 100%

@@ -120,4 +120,10 @@ head.ready(function() {
 	$(".js-menu-btn").click(function(){
 		$(".js-menu").slideToggle();
 	});
+
+	// isotope
+	$('#news').isotope({
+		// options
+		itemSelector: '.clause__item'
+	});
 });
