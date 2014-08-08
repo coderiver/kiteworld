@@ -121,6 +121,9 @@ head.ready(function() {
 		$(".js-menu").slideToggle();
 	});
 
+	$(".js-menu-btn, .js-basket-btn").click(function(){
+		$(this).toggleClass('is-active')
+	});
 	// isotope
 	$('#news').isotope({
 		// options

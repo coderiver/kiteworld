@@ -89,7 +89,7 @@ body
 .header
 	position: relative
 	height: 84px
-	background: $grey
+	background: #1a1a1a
 	+clr
 	.container
 		position: relative
@@ -100,7 +100,7 @@ body
 		top: 20px
 		z-index: 3
 		display: inline-block
-		+svg(logo, 150, 136)
+		+svg(logo, 150, 86)
 	.header__phone
 		color: $white
 	.header__mail
@@ -113,36 +113,128 @@ body
 		text-align: center
 		display: inline-block
 		vertical-align: middle
-	.header__ico_menu
+	.header-btn_menu
 		right: 0
-		+svg(menu, 80, 80)
-	.header__ico_basket
+		i
+			+svg(menu, 34, 34)
+	.header-btn_basket
 		right: 80px
-		+svg(basket, 80, 80)
-	.header__ico
+		i
+			+svg(basket, 34, 36)
+	.header-btn
 		position: absolute
 		top: 0
-		cursor: pointer
+		height: 80px
+		width: 80px
+		line-height: 80px
+		text-align: center
+		vertical-align: top
 		display: none
+		background: none
+		i
+			vertical-align: middle
+			display: inline-block
+		&:hover,
+		&.is-active
+			background: #363636
 
 //menu
 .menu
 	height: 84px
-	line-height: 84px
 	font-size: 0
 	.menu__item
-		margin-left: 20px
 		vertical-align: middle
 		display: inline-block
 		+box
+		&:hover
+			a
+				color: $white
+				text-decoration: none
+				background: #333
+			.menu__drop
+				display: block
 		&:first-child
 			margin-left: 0
-	a
-		color: $white
-		font-size: 20px
-		+pb
-		&:hover
+		a
+			padding: 0 10px
+			height: 84px
+			line-height: 84px
 			color: $white
+			font-size: 20px
+			display: block
+			+transition(0.2s)
+			+pb
+	.menu__drop
+		position: absolute
+		left: -490px
+		right: -15px
+		top: 100%
+		z-index: 2
+		.drop__col
+			a
+				height: auto
+				line-height: 1.4 
+				&:hover
+					text-decoration: underline
+
+
+//menumob
+.menumob
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	padding: 40px 15px 60px
+	z-index: 2
+	background: #363636
+	display: none
+	+clr
+	.menumob__title
+		margin: 20px 0
+		color: $white
+		font-size: 24px
+		display: block
+		+pb
+	ul
+		padding-left: 10px
+		li
+			margin: 8px 0
+		a
+			color: #a1a1a1
+			font-size: 18px
+
+//drop
+.drop
+	padding: 25px 60px 60px
+	text-align: right
+	font-size: 0
+	background: #333
+	display: none
+	.drop__col
+		width: 18%
+		text-align: left
+		font-size: 13px
+		vertical-align: top
+		display: inline-block
+		.drop__title_disc
+			padding-right: 0
+			display: inline-block
+		.discount
+			font-size: 20px
+			+pb
+	.drop__list
+		padding-right: 10px
+		+box
+		.drop__item
+			margin-top: 10px
+			height: auto
+			a
+				color: #b2b2b2
+				font-size: 16px
+				+pr
+	.drop__title
+		margin-top: 35px
+		font-size: 20px
 
 //breadcrumbs
 .breadcrumbs
@@ -603,9 +695,55 @@ body
 		text-decoration: line-through
 		+pr
 
+//discount
 .discount
 	padding-left: 5px
 	color: #ee4023
+
+//pay
+.pay
+	padding-top: 40px
+	.discount
+		padding-left: 0
+
+//help
+.help
+	padding: 10px 30px 30px !important
+	background: #cce4ff
+	.help__title
+		+pb
+	.help__list
+		counter-reset: list
+		li
+			position: relative
+			margin-top: 20px
+			padding: 7px 0 0 33px
+			&:before
+				counter-increment: list
+				content: counter(list)
+				position: absolute
+				top: 0
+				left: 0
+				color: $black
+				font-size: 42px
+				+pb
+			&:first-letter
+				text-transform: uppercase
+	.help__bold
+		color: $black
+		+pb
+	.help__ico-f
+		margin-right: 3px
+		vertical-align: middle
+		display: inline-block
+		+s(f-ico)
+	
+//price
+.price
+	font-size: 24px
+	+pb
+	del
+		+pr
 
 //footer
 .footer
@@ -698,23 +836,10 @@ body
 		height: 60px !important
 	.header__info
 		display: none !important
-	.header__ico
+	.header-btn
 		display: block !important
 	.menu
-		position: absolute !important
-		top: 80px
-		left: 0
-		right: 0
-		margin: 0 !important
-		height: auto
-		background: #363636
-		z-index: 2
 		display: none
-		.menu__item
-			float: none
-			margin: 0
-			text-align: center
-			display: block
 	.breadcrumbs
 		display: none
 	.product
@@ -800,11 +925,11 @@ body
 			margin-right: -15px
 	.footer__item 
 		padding: 0 20px !important
+	.footer__item_first
+		padding-bottom: 60px !important
 	.footer__item_visible
 		margin: 60px 0 0 0
 	.soc
 		margin: 40px 0 !important
 	.buy .buy__text
 		margin-left: 15px !important
-	.footer
-		padding-bottom: 60px !important

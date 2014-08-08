@@ -5,11 +5,12 @@
 .topic
 	font-size: 42px
 	line-height: 1.1
-	background: url(../img/topic-bg-right.png) no-repeat 100% 0, url(../img/topic-bg-left.png) no-repeat 0 0 
+	background: url(../img/topic-bg-right.png) no-repeat 100% 50%, url(../img/topic-bg-left.png) no-repeat 0 50% 
 	background-size: contain
 	+pb
+	+clr
 	.container
-		padding: 60px 90px 60px 30px
+		padding: 50px 90px 50px 30px
 
 //category
 .category
@@ -28,7 +29,7 @@
 			opacity: 0.7
 			display: block
 			+transition(all 0.2s linear)
-	.category__link
+	.category__link, .category__prise
 		position: absolute
 		top: 0
 		left: 0
@@ -43,6 +44,11 @@
 			line-height: 1.1
 			display: inline-block
 			vertical-align: middle
+	.category__prise
+		height: 160%
+		font-size: 16px
+		text-align: left
+		display: none
 	.category__item_lime
 		background: #a1ba00
 	.category__item_light-green
@@ -131,8 +137,6 @@
 			font-size: 24px
 	.clause__name, .clause__title, .clause__country
 		+pb
-	.clause__text, .clause__city, .clause__price
-		+pl
 	.clause__name
 		font-size: 16px
 	.clause__title
@@ -158,6 +162,8 @@
 
 //max-width: 992
 @media screen and (max-width: 992px)
+	.topic
+		background-size: cover
 	.category
 		.category__item
 			width: 50%
@@ -167,9 +173,16 @@
 				float: right
 				height: 100%
 				width: auto
+			br
+				display: none
 		.category__link
+			height: 80%
 			padding-left: 17px
+			font-size: 24px
 			text-align: left
+		.category__prise
+			padding-left: 17px
+			display: block
 	.clause
 		.clause__top
 			.clause__country
@@ -178,4 +191,8 @@
 @media screen and (max-width: 768px)
 	.category
 		.category__item
+			height: 81px
 			width: 100%
+@media screen and (max-width: 322px)
+	.topic
+		display: none

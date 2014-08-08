@@ -2,25 +2,12 @@
 <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
+	 viewBox="0 0 34 36" enable-background="new 0 0 34 36" xml:space="preserve">
 <g>
-	<rect x="602" fill="#363636" width="80" height="80"/>
 	<g>
-		<g>
-			<path fill="#FFFFFF" d="M645.5,45H626V27.8l-4-3.8l3-3l3.8,4H656v14.2L645.5,45z M630,41h14.5l7.5-4.2V29h-22V41z"/>
-		</g>
-		<circle fill="#FFFFFF" cx="629.5" cy="53.5" r="3.5"/>
-		<circle fill="#FFFFFF" cx="652.5" cy="53.5" r="3.5"/>
+		<path fill="#FFFFFF" d="M23.5,24H4V6.8L0,3l3-3l3.8,4H34v14.2L23.5,24z M8,20h14.5l7.5-4.2V8H8V20z"/>
 	</g>
-</g>
-<g>
-	<rect fill="#363636" width="80" height="80"/>
-	<g>
-		<g>
-			<path fill="#FFFFFF" d="M43.5,45H24V27.8L20,24l3-3l3.8,4H54v14.2L43.5,45z M28,41h14.5l7.5-4.2V29H28V41z"/>
-		</g>
-		<circle fill="#FFFFFF" cx="27.5" cy="53.5" r="3.5"/>
-		<circle fill="#FFFFFF" cx="50.5" cy="53.5" r="3.5"/>
-	</g>
+	<circle fill="#FFFFFF" cx="7.5" cy="32.5" r="3.5"/>
+	<circle fill="#FFFFFF" cx="30.5" cy="32.5" r="3.5"/>
 </g>
 </svg>
