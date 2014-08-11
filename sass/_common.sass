@@ -702,12 +702,127 @@ body
 
 //pay
 .pay
-	padding-top: 40px
+	position: relative
+	padding-top: 20px
+	+clr
+	&.pay_top
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			width: 100%
+			height: 7px
+			background: #cce4ff
+			display: none !important
+		.pay__info
+			position: absolute 
+			top: 0
+			right: 0
+			width: 80px
+			height: 80px
+			z-index: 1
+			border-bottom: 5px solid #aec9e8
+			display: none !important
+			+svg(pay-info, 76, 81)
+			+box
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				left: 50%
+				margin: -30px 0 0 -30px
+				display: none !important
+				+svg(pay-info2, 70, 60)
+			&.is-active
+				background: #cce4ff
+				&:before
+					display: block !important
+	&.pay_top-warning
+		.is-top
+			top: 255px
+	.pay__row
+		margin-bottom: 40px
+		+clr
+		&.pay__row_mod
+			margin-bottom: 25px
+		&.pay__border_block
+			display: none
+	.pay__col
+		height: 40px
+		line-height: 40px
+	.pay__left
+		padding-right: 30px
+	.pay__border
+		border-bottom: 4px solid #e5e5e5
+	.pay__titletop
+		height: 33px
+		font-size: 18px
+		line-height: 1.1
+		line-height: 33px
+		vertical-align: top
+	.pay__title
+		font-size: 24px
+		+pb
+	.pay__text
+		padding: 15px 0 0 40px
+		a
+			margin-right: 20px
+			color: $blue
+			+pb
 	.discount
 		padding-left: 0
+	.title
+		padding-bottom: 20px
+	.media
+		img
+			margin-right: 30px
+	.media-heading
+		font-size: 24px
+		color: $black
+		+pb
+	.pay__input
+		font-size: 0
+	.input_28
+		margin-left: 8%
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	.pay__warning
+		margin-bottom: 20px
+	&.pay_grey
+		background: #f2f2f2
+	&.pay_form
+		font-size: 16px
+		.input__row
+			margin-bottom: 17px
+//warning
+.warning
+	position: relative
+	padding: 15px
+	color: $white
+	background: #ff7518
+	+box
+	a
+		color: $white
+		text-decoration: underline
+		+pb
+		&:hover
+			color: $white
+			text-decoration: none
+	.warning__btn
+		position: absolute
+		top: 15px
+		right: 15px
+		background: none
+		+svg(close-img, 14, 13)
 
 //help
 .help
+	position: absolute !important
+	top: 143px
+	right: 0
+	bottom: 0
 	padding: 10px 30px 30px !important
 	background: #cce4ff
 	.help__title
@@ -737,6 +852,8 @@ body
 		vertical-align: middle
 		display: inline-block
 		+s(f-ico)
+	.help__row
+		text-align: center
 	
 //price
 .price
@@ -744,6 +861,144 @@ body
 	+pb
 	del
 		+pr
+	&.price_big
+		font-size: 34px
+
+//order
+.order
+	padding-top: 40px
+	.order__title
+		margin: 30px 0 40px
+		padding-left: 15px
+		font-size: 36px
+		+pb
+		&.order__title_mod
+			padding: 0 50px 0 0
+			display: inline-block
+	.order__btn
+		width: 178px
+	.order__checkbox
+		margin-bottom: 17px
+		span
+			font-size: 18px
+	.order__text_link
+		padding: 25px 0 18px
+	.order__row
+		.btn_green
+			padding: 0
+			width: 60px
+			vertical-align: super
+			i
+				vertical-align: middle
+				display: inline-block
+				+svg(settings-pic, 22, 22)
+//radiobatton
+.radiobatton, .checkbox
+	position: relative
+	display: inline-block
+	+unselectable
+	input
+		position: absolute
+		left: 0
+		top: 4px
+		width: 24px
+		height: 24px
+		opacity: 0
+		z-index: 2
+		&:checked
+			+ span
+				&:before
+					background: #00aeff
+					border-color: #0094d9
+				&:after
+					display: block
+	span
+		position: relative
+		padding-left: 40px
+		line-height: 1.4
+		color: $black
+		font-size: 24px
+		display: inline-block
+		+border-radius(50%)
+		+pb
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 4px
+			width: 24px
+			height: 24px
+			border: 1px solid #d9d9d9
+			background: $white
+			+border-radius(50%)
+		&:after
+			display: none
+			content: ""
+			position: absolute
+			top: 11px
+			left: 7px
+			height: 10px
+			width: 10px
+			+border-radius(50%)
+			background: $black
+
+//checkbox
+.checkbox
+	input
+		top: 0
+		&:checked
+			+ span
+				&:before
+					border-color: #00b900
+					background: #00d700
+				&:after
+					display: block
+	span
+		height: 24px
+		line-height: 24px
+		font-size: 16px
+		font-weight: 400
+		+pr
+		&:before
+			top: 0
+			border-color: #d9d9d9
+			+border-radius(0)
+			background: none
+		&:after
+			top: 6px
+			left: 3px
+			+s(availability-ico)
+//input
+.input
+	.input__row
+		height: 40px
+		&.input__row_area
+			height: 80px
+	input, textarea
+		padding: 0 10px
+		height: 100%
+		width: 100%
+		font-size: 20px
+		border: 2px solid #d9d9d9
+		+placeholder-color($black)
+		+box
+		&:focus
+			+placeholder
+				font-size: 0
+	textarea
+		padding: 8px 10px
+		line-height: 1.2
+		resize: none
+	&.input_28
+		width: 28%
+
+//table
+.table
+	th, td
+		border-top: none !important
+	th
+		font-size: 24px
+		+pb
 
 //footer
 .footer
@@ -890,6 +1145,23 @@ body
 			float: left
 		.mail
 			float: right
+	.help
+		display: none
+	.pay
+		.price
+			font-size: 19px
+		.price_big
+			font-size: 24px
+		&.pay_top
+			&:before,
+			.pay__info
+				display: block !important
+			.help
+				top: 0
+				left: 0
+	.pay__row
+		.price, .discount
+			font-size: 18px
 
 @media screen and (max-width: 768px)
 	.field__top, .field__top_grey
@@ -923,6 +1195,8 @@ body
 		+svg(pic-scr-top2, 20, 13)
 		&.btn-top_mod
 			margin-right: -15px
+	.btn_resp
+		width: 100%
 	.footer__item 
 		padding: 0 20px !important
 	.footer__item_first
@@ -933,3 +1207,83 @@ body
 		margin: 40px 0 !important
 	.buy .buy__text
 		margin-left: 15px !important
+	.pay__row_top
+		display: none
+	.pay__row
+		.media
+			width: 100%
+			margin-bottom: 15px
+			img
+				margin-right: 15px
+			.media-body
+				padding-right: 0
+				+clr
+			.pull-left
+				padding-left: 0
+				margin-right: 0
+			.media-heading	
+				width: 70%
+				padding-top: 0
+				font-size: 18px
+		.input_mar, .price, .discount
+			margin-left: -15px !important
+		.input
+			margin-top: 22px
+		.price, .discount
+			font-size: 16px
+		.pay__col, .price
+			height: auto
+			line-height: 1.4
+		.pay__title
+			font-size: 18px
+		.radiobatton
+			span
+				font-size: 18px
+		.pay__text
+			display: none
+		.pay__input
+			padding-bottom: 22px
+		.col-grey
+			padding-top: 1px
+			background: #d9d9d9
+		.pay__title_mob
+			padding: 27px 0 0
+		&.pay__row_form
+			margin-bottom: 0
+		&.pay__border_none
+			display: none
+		&.pay__border_block
+			display: block !important
+	.deliv
+		margin-bottom: 8px !important
+		.col-grey
+			height: 80px
+			line-height: 80px
+			.price
+				vertical-align: middle
+				display: inline-block
+		.radiobatton
+			span
+				vertical-align: middle
+				&:before,
+				&:after
+					top: 50%
+					margin-top: -12px
+				&:after
+					margin-top: -5px
+			input
+				top: 50%
+				margin-top: -12px
+	.pay_form
+		.pay__row
+			margin-bottom: 0
+			.input
+				margin-top: 0
+				textarea
+					font-size: 16px
+					height: 100px
+			p
+				display: none
+		.btn
+			margin-top: 38px
+			width: 100%

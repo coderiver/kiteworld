@@ -140,10 +140,16 @@
 	</header>
 	<!-- END header -->
 	<!-- BEGIN container pay -->
-	<div class="container pay pay_top">
+	<div class="container pay pay_top pay_top-warning">
 		<button class="pay__info js-info"></button>
 		<div class="row">
 			<div class="col-md-12"><h3 class="title">Корзина</h3></div>
+			<div class="col-md-12">
+				<div class="col-md-9 pay__warning warning js-warning">
+					<p><strong>Часть товаров из вашей корзины нельзя купить в кредит.</strong><br> Подробнее смотрите <a href="#">страницу оформления заказа</a></p>
+					<button class="warning__btn js-btn-warning"></button>
+				</div>
+			</div>
 			<div class="pay__left col-md-9 col-sm-12">
 				<div class="pay__row pay__row_top row">
 					<div class="col-md-7 col-sm-6">
@@ -201,7 +207,7 @@
 						<div class="price">16 000 <del>P</del></div>
 					</div>
 				</div>
-				<div class="pay__row row">
+				<div class="pay__row pay__row_opacity row">
 					<div class="col-md-7 col-sm-6">
 						<div class="media">
 							<a class="pull-left" href="#">
@@ -247,7 +253,7 @@
 				</div>
 			</div>
 			<!-- BEGIN help -->
-			<div class="help col-md-3 js-help">
+			<div class="help col-md-3 is-top js-help">
 				<h3 class="help__title">Нужна помощь?</h3>
 				<p>Мы всегда рады ответить на ваши вопросы. Выберите удобный вам способ:</p>
 				<ul class="help__list">
@@ -269,226 +275,6 @@
 		</div>
 	</div>
 	<!-- END container pay -->
-	<!-- BEGIN pay pay_grey -->
-	<div class="pay pay_grey">
-		<!-- BEGIN container -->
-		<div class="container">
-			<div class="row">
-				<div class="col-md-11 col-sm-12">
-					<h3 class="title">Доставка и оплата</h3>
-					<div class="pay__row pay__row_form row">
-						<div class="col-md-4 col-sm-4"><div class="pay__title">Адрес доставки</div></div>
-						<div class="col-md-2 col-sm-2 col-grey"><div class="input">
-							<div class="input__row"><input type="text" placeholder="Индекс"></div>
-						</div></div>
-						<div class="col-md-3 col-sm-3 col-grey"><div class="input">
-							<div class="input__row"><input type="text" placeholder="Страна"></div>
-						</div></div>
-						<div class="col-md-3 col-sm-3 col-grey"><div class="input">
-							<div class="input__row"><input type="text" placeholder="Регион"></div>
-						</div></div>
-					</div>
-					<div class="pay__row row">
-						<div class="col-md-4 col-sm-4 col-grey"></div>
-						<div class="col-md-2 col-sm-2 col-grey"><div class="input">
-							<div class="input__row"><input type="text" placeholder="Нас. пункт"></div>
-						</div></div>
-						<div class="col-md-3 col-sm-3 col-grey"><div class="input">
-							<div class="input__row"><input type="text" placeholder="Улица"></div>
-						</div></div>
-						<div class="col-md-3 col-sm-3 col-grey pay__input">
-							<div class="input input_28">
-								<div class="input__row">
-									<input type="text" placeholder="дом">
-								</div>
-							</div>
-							<div class="input input_28">
-								<div class="input__row">
-									<input type="text" placeholder="стр.">
-								</div>
-							</div>
-							<div class="input input_28">
-								<div class="input__row">
-									<input type="text" placeholder="кв.">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="pay__row row deliv">
-						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title">Способ доставки</div></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
-							<!-- BEGIN radiobatton -->
-							<label class="radiobatton">
-								<input type="radio" checked="checked" name="delivery">
-								<span>Курьерская доставка</span>
-							</label>
-							<!-- END radiobatton -->
-							<div class="pay__text">
-								Доставка осуществляется транспортными компаниями Желдорэкспедиция (www.jde.ru) . Срок доставки этими компаниями сильно зависит от места нахождения нашего клиента, так, например по нашей многолетней правктике доставка в ближайшие города москвы такие как Тверь,
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">3 000 <del>P</del></div></div>
-					</div>
-					<div class="pay__row row deliv">
-						<div class="col-md-4 col-sm-4 col-xs-12"></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
-							<!-- BEGIN radiobatton -->
-							<label class="radiobatton">
-								<input type="radio" name="delivery">
-								<span>Самовывоз</span>
-							</label>
-							<!-- END radiobatton -->
-							<div class="pay__text">
-								Заказ нужно будет забрать со склада нашего магазина. Дальше рассказ, как проехать к самовывозу.
-							</div>
-							<div class="pay__text">
-								<a href="#">Карта</a>
-								<a href="#">Как проехать</a>
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-2 col-xs-5 col-grey">Бесплатно</div>
-					</div>
-					<div class="pay__row row deliv">
-						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title pay__title_mob">Способ оплаты</div></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
-							<!-- BEGIN radiobatton -->
-							<label class="radiobatton">
-								<input type="radio" name="pay">
-								<span>Наличными курьеру</span>
-							</label>
-							<!-- END radiobatton -->
-							<div class="pay__text">
-								Курьер привозит к вам домой товары, вы оплачиваете при 
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">Бесплатно</div></div>
-					</div>
-					<div class="pay__row row deliv">
-						<div class="col-md-4 col-sm-4 col-xs-12"></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
-							<!-- BEGIN radiobatton -->
-							<label class="radiobatton">
-								<input type="radio" checked="checked" name="pay">
-								<span>Пластиковой картой</span>
-							</label>
-							<!-- END radiobatton -->
-							<div class="pay__text">
-								Удобный способ оплаты не выходя из своего дома! Можно пользоваться кредитными картами, чтобы кататься уже сейчас, а 
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">250 <del>P</del></div></div>
-					</div>
-					<div class="pay__row row deliv">
-						<div class="col-md-4 col-sm-4 col-xs-12"></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
-							<!-- BEGIN radiobatton -->
-							<label class="radiobatton">
-								<input type="radio" name="pay">
-								<span>Оформить кредит онлайн</span>
-							</label>
-							<!-- END radiobatton -->
-							<div class="pay__text">
-								Здесь кратко перечислить условия - сумма первого взноса, минимальная/максимальная покупка, какие документы требуются, как долго рассматривается заявка / оформляются документы.
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">Бесплатно</div></div>
-					</div>
-					<div class="pay__row pay__border pay__border_none"></div>
-					<div class="pay__row pay__row_mod row">
-						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title pay__title_mob">Итого с доставкой</div></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 pay__col">Стоимость товаров</div>
-						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">52 000 <del>P</del></div></div>
-					</div>
-					<div class="pay__row pay__row_mod row">
-						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title"></div></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 pay__col">Доставка курьером по Москве</div>
-						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">3 000 <del>P</del></div></div>
-					</div>
-					<div class="pay__row row">
-						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title"></div></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 pay__col">Комиссия за платёж пластиковой картой</div>
-						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">52 000 <del>P</del></div></div>
-					</div>
-					<div class="pay__row pay__border pay__border_block"></div>
-					<div class="pay__row row">
-						<div class="col-md-4 col-sm-4 col-xs-12"></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 pay__col"><div class="pay__title">Сумма к оплате</div></div>
-						<div class="col-md-2 col-sm-2 col-xs-5 pay__col"><div class="price price_big">52 250 <del>P</del></div></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- END container -->
-	</div>
-	<!-- END pay pay_grey -->
-	<!-- BEGIN container -->
-	<div class="container">
-		<!-- BEGIN row pay pay_form -->
-		<div class="row pay pay_form">
-			<div class="col-md-11 col-sm-12">
-				<h3 class="title">Ваши контактные данные</h3>
-				<div class="pay__row row">
-					<div class="col-md-4 col-sm-4"><div class="pay__title">ФИО</div></div>
-					<div class="col-md-8 col-sm-8">
-						<div class="input">
-							<div class="input__row"><input type="text">
-							</div>
-						</div>
-						<p>Требуется для службы доставки, чтобы ваш заказ достался только вам.</p>
-					</div>
-				</div>
-				<div class="pay__row row">
-					<div class="col-md-4 col-sm-4"><div class="pay__title">Е-мейл</div></div>
-					<div class="col-md-8 col-sm-8">
-						<div class="input">
-							<div class="input__row"><input type="text">
-							</div>
-						</div>
-						<p>Мы будем информировать вас о статусе вашего заказа по электронной почте. </p>
-						<p>
-							<!-- BEGIN checkbox -->
-							<label class="checkbox">
-								<input type="checkbox" checked="checked">
-								<span>Оформить кредит онлайн</span>
-							</label>
-							<!-- END checkbox -->
-						</p>
-					</div>
-				</div>
-				<div class="pay__row row">
-					<div class="col-md-4 col-sm-4"><div class="pay__title">Телефон</div></div>
-					<div class="col-md-8 col-sm-8">
-						<div class="input">
-							<div class="input__row"><input type="text">
-							</div>
-						</div>
-						<p>Для связи по срочным вопросам</p>
-					</div>
-				</div>
-				<div class="pay__row row">
-					<div class="col-md-4 col-sm-4"><div class="pay__title">Комментарий</div></div>
-					<div class="col-md-8 col-sm-8">
-						<div class="input">
-							<div class="input__row input__row_area"><textarea placeholder="Время доставки, ваша любимая футбольная команда, ваше отношение к политике - пишите, мы рады вас слышать!"></textarea>
-							</div>
-						</div>
-					</div>
-				</div><div class="pay__row row">
-					<div class="col-md-4 col-sm-4"></div>
-					<div class="col-md-8 col-sm-8">
-						<div class="input">
-							<div class="input__row input__row_area">
-								<button class="btn btn_green">Оформить заказ</button>
-							</div>
-						</div>
-						<p></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- END row pay pay_form -->
-	</div>
-	<!-- END container -->
 	<!-- BEGIN footer -->
 	<footer class="footer">
 		<!-- BEGIN container -->
