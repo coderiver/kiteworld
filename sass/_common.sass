@@ -66,9 +66,16 @@ $grey: #353535
 $blue: #0096FF
 
 body
+	position: relative
 	font-size: 18px
 	line-height: 1.4
 	+pr
+	.loader
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -92px 0 0 -130px
+		display: inline-block
 
 
 // common blocks 
@@ -79,6 +86,9 @@ body
 		text-decoration: none
 		&:hover
 			text-decoration: underline
+	&.is-loading
+		position: relative
+		opacity: 0
 //wrapper
 .wrapper
 	margin: 0 auto
@@ -412,7 +422,17 @@ body
 	position: relative
 	cursor: pointer
 	font-size: 12px
-	display: none
+	&.select-2_mod
+		display: none
+		li
+			&.active,
+			&:hover
+				background: #717791
+	&.is-active
+		.select__text
+			+box-shadow(none)
+			&:after
+				+rotate(180)
 	.select_white
 		background: #fff 
 	.select__text
@@ -440,21 +460,25 @@ body
 			border-color: #000 transparent transparent transparent
 	.select__list
 		position: absolute
-		display: none
 		left: 0
 		right: 0
 		top: 100%
+		padding: 0 0 7px
 		z-index: 100
-		max-height: 200px
+		max-height: 290px
 		overflow-x: hidden
 		overflow-y: auto
-		background: #d9d9d9
+		background: #f2f2f2
+		border-bottom: 5px solid #d9d9d9
+		display: none
+		+box
 		li
+			margin-bottom: 8px
 			cursor: pointer
 			line-height: 1
+			+clr
 			&.active,
 			&:hover
-				background: #717791
 				a
 					background: none !important
 					text-decoration: none
@@ -466,7 +490,16 @@ body
 				font-size: 16px
 				text-align: center
 				display: block
-
+			.checkbox
+				margin: 0 !important
+		&.select__list_white
+			li
+				margin: 0 8px
+				padding-bottom: 8px
+				background: $white
+				&:first-child
+					padding-top: 13px
+					+box-shadow(inset 0 5px 0 #d9d9d9)
 //buy
 .buy
 	.buy__row
@@ -676,17 +709,38 @@ body
 //kate
 .kate
 	margin-bottom: 55px
+	display: block
 	+pb
 	.kate__img
+		position: relative
 		margin-bottom: 20px
 		font-size: 18px
+		overflow: hidden
 		border: 2px solid #e5e5e5
 		display: block
+		+clr
 		img
 			width: 100%
 			display: block
+	.kate__info
+		position: absolute
+		top: -9px
+		right: -54px
+		width: 156px
+		height: 63px
+		line-height: 77px
+		font-size: 28px
+		text-align: center
+		color: $white
+		text-transform: uppercase
+		background: #00d700
+		+rotate(45)
+		+pr
+		&.kate__info_red
+			background: #ff0000
 	.kate__text, .kate__name
 		color: $blue
+		display: block
 	.kate__name, .kate__prise
 		font-size: 26px
 	.rate__prise-old
@@ -864,6 +918,48 @@ body
 	&.price_big
 		font-size: 34px
 
+//setting
+.setting
+	position: relative
+	background: #f2f2f2
+	border-bottom: 4px solid #d9d9d9
+	.setting__btn
+		position: absolute
+		top: 18px
+		right: 20px
+		width: 9px
+		height: 13px
+		background: none
+		+arr(9, 13, $black, r)
+	.setting__item
+		padding: 12px 20px 12px 12px
+		display: none
+	.setting__top
+		padding: 0 12px
+		height: 46px
+		line-height: 46px
+		cursor: pointer
+	.setting__row
+		margin-top: 15px
+		font-size: 0
+		+clr
+		&:first-child
+			margin-top: 0
+	.setting__title
+		width: 30%
+		color: #656565
+		&:first-letter
+			text-transform: uppercase
+	.setting__title, .setting__text
+		font-size: 16px
+		vertical-align: top
+		display: inline-block
+	.setting__text
+		padding-right: 10px
+		width: 70%
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
 //order
 .order
 	padding-top: 40px
@@ -875,8 +971,23 @@ body
 		&.order__title_mod
 			padding: 0 50px 0 0
 			display: inline-block
+	.order__title_2
+		font-size: 24px
+		+pb
+		&.order__title_mob
+			display: none
+	.order__item_mar
+		margin-bottom: 35px
+		+clr
+	.order__item
+		.btn_mod
+			width: 100%
 	.order__btn
 		width: 178px
+		.btn__ico
+			vertical-align: middle
+			+svg(settings-pic, 22, 22)
+			display: none
 	.order__checkbox
 		margin-bottom: 17px
 		span
@@ -892,6 +1003,26 @@ body
 				vertical-align: middle
 				display: inline-block
 				+svg(settings-pic, 22, 22)
+	.input
+		.input__row_area
+			margin: 20px 0
+			height: 130px
+
+//consist__mob
+.consist__mob
+	font-size: 14px
+	display: none
+	.consist__item
+		padding: 10px 0 30px 5px
+		border-top: 4px solid #f2f2f2
+		&:first-child
+			border: none
+	.consist__row
+		margin-top: 20px
+	.consist__title
+		font-size: 14px
+		+pb
+
 //radiobatton
 .radiobatton, .checkbox
 	position: relative
@@ -950,7 +1081,7 @@ body
 			+ span
 				&:before
 					border-color: #00b900
-					background: #00d700
+					background: #00d700 !important
 				&:after
 					display: block
 	span
@@ -958,10 +1089,11 @@ body
 		line-height: 24px
 		font-size: 16px
 		font-weight: 400
+		cursor: pointer
 		+pr
 		&:before
 			top: 0
-			border-color: #d9d9d9
+			background: #fff !important
 			+border-radius(0)
 			background: none
 		&:after
@@ -999,6 +1131,47 @@ body
 	th
 		font-size: 24px
 		+pb
+
+//filter
+.filter
+	margin-bottom: 60px
+	.filter__top
+		margin-bottom: 8px
+		+clr
+		.select__text
+			padding-left: 115px
+		.select__list
+			padding: 0 15px
+	.filter__row
+		margin-bottom: 10px
+	.select-2
+		position: relative
+		.select__name
+			position: absolute
+			left: 16px
+			top: 50%
+			margin-top: -10px
+			height: 20px
+			line-height: 20px
+			font-size: 16px
+			color: #666666
+			z-index: 1
+	.filter__select-2
+		width: 330px
+		.select__list
+			padding: 0 8px
+	.filter__setting
+		display: none
+		+clr
+	.filter__text
+		font-size: 20px
+	.filter__item
+		.filter__closebtn
+			position: absolute
+			top: 10px
+			right: 15px
+			+svg(close-black ,20, 20)
+			display: none
 
 //footer
 .footer
@@ -1162,6 +1335,9 @@ body
 	.pay__row
 		.price, .discount
 			font-size: 18px
+	.filter
+		.filter__top
+			margin-top: 22px
 
 @media screen and (max-width: 768px)
 	.field__top, .field__top_grey
@@ -1179,7 +1355,7 @@ body
 		background: none !important
 	.article
 		margin-bottom: 0
-	.select-2
+	.select-2_mod
 		display: block !important
 	.media-text
 		margin: 20px 0 40px
@@ -1287,3 +1463,46 @@ body
 		.btn
 			margin-top: 38px
 			width: 100%
+	.order
+		.order__btn
+			padding: 0
+			width: 60px
+			vertical-align: super
+			.btn__ico
+				display: inline-block
+		.btn__text
+			display: none
+		.table
+			display: none
+		.order__title
+			font-size: 20px
+		.consist__mob
+			display: block
+			.price
+				font-size: 16px
+		.row-xs
+			margin-bottom: 24px
+			+clr
+			.col-xs-12
+				margin-bottom: 12px
+			.order__title_2, .order__text
+				float: left
+				width: 50%
+		.order__title_2
+			font-size: 14px
+			&.order__title_mob
+				display: block
+		.order__text
+			font-size: 14px
+	.filter
+		.filter__item, .filter__sorting
+			display: none
+		.filter__setting
+			float: left
+			width: 100%
+			display: block
+		.filter__top
+			.title
+				width: 100%
+		.filter__item
+			padding-top: 45px

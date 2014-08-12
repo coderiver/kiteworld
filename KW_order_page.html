@@ -143,11 +143,12 @@
 	<div class="container">
 		<div class="row order">
 			<div class="col-md-12"><div class="title">Заказ №589</div></div>
+			<!-- BEGIN consist -->
 			<div class="col-md-12">
 				<div class="order__title order__title_mod">Состав заказа</div>
-				<button class="order__btn btn btn_green">Изменить</button>
+				<button class="order__btn btn btn_green"><span class="btn__text">Изменить</span><i class="btn__ico"></i></button>
 			</div>
-			<div class="col-md-12">
+			<div class="col-md-12 consist">
 				<table class="table">
 					<tr>
 						<th>Товары и услуги</th>
@@ -204,7 +205,97 @@
 						<td></td>
 					</tr>
 				</table>
+				<div class="consist__mob">
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Товар</div>
+							<div class="col-xs-8">Кайт North Vegas 2014 12м²</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Артикул</div>
+							<div class="col-xs-8">12-233-2223</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Цена</div>
+							<div class="col-xs-8">47 988</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Кол-во</div>
+							<div class="col-xs-8">1</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Скидка</div>
+							<div class="col-xs-8">5%</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Сумма</div>
+							<div class="col-xs-8">45 999</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Склад</div>
+							<div class="col-xs-8">KW</div>		
+						</div>
+					</div>
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Товар</div>
+							<div class="col-xs-8">Кайт North Vegas 2014 12м²</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Артикул</div>
+							<div class="col-xs-8">12-233-2223</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Цена</div>
+							<div class="col-xs-8">47 988</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Кол-во</div>
+							<div class="col-xs-8">1</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Скидка</div>
+							<div class="col-xs-8">5%</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Сумма</div>
+							<div class="col-xs-8">45 999</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Склад</div>
+							<div class="col-xs-8">KW</div>		
+						</div>
+					</div>
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Товар</div>
+							<div class="col-xs-8">Кайт North Vegas 2014 12м²</div>
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Сумма</div>
+							<div class="col-xs-8">45 999</div>
+						</div>
+					</div>
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Товар</div>
+							<div class="col-xs-8">Кайт North Vegas 2014 12м²</div>
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Сумма</div>
+							<div class="col-xs-8">45 999</div>
+						</div>
+					</div>
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Итого к оплате</div>
+							<div class="col-xs-8"><div class="price">69 999<del>P</del></div></div>		
+						</div>
+					</div>
+				</div>
 			</div>
+			<!-- END consist -->
+			<!-- BEGIN actions -->
 			<div class="col-md-12">
 				<div class="order__title">Действия по заказу</div>
 			</div>
@@ -242,6 +333,8 @@
 					<!-- END checkbox -->
 				</div>
 			</div>
+			<!-- END actions -->
+			<!-- BEGIN info -->
 			<div class="order__info col-md-12">
 				<div class="order__delivery col-md-4">
 					<div class="order__row">
@@ -272,16 +365,20 @@
 					<div class="order__text order__text_phone">+788339476745</div>
 				</div>
 			</div>
+			<!-- END info -->
+			<!-- BEGIN comments -->
 			<div class="col-md-12">
 				<div class="order__title">Комментарии</div>
-				<div class="order__item">
-					<div class="col-md-2">
-						<div class="order__title_2">Дата</div>
-						<div class="order__text order__text_date">12.08.2014</div>
-					</div>
-					<div class="col-md-2">
-						<div class="order__title_2">Пользователь</div>
-						<div class="order__text order__text_name">roma-sbend</div>
+				<div class="order__item order__item_mar">
+					<div class="row-xs">
+						<div class="col-md-2 col-xs-12">
+							<div class="order__title_2">Дата</div>
+							<div class="order__text order__text_date">12.08.2014</div>
+						</div>
+						<div class="col-md-2 col-xs-12">
+							<div class="order__title_2">Пользователь</div>
+							<div class="order__text order__text_name">roma-sbend</div>
+						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="order__text">Прошу вас перезвонить за полчаса до доставки, чтобы я успел помыть свою 
@@ -293,21 +390,252 @@
 			</div>
 			<div class="col-md-12">
 				<div class="order__item">
-					<div class="col-md-2">
-						<div class="order__text order__text_date">15.08.2014</div>
-					</div>
-					<div class="col-md-2">
-						<div class="order__text order__text_name">vasya-admin</div>
+					<div class="row-xs">
+						<div class="col-md-2 col-xs-12">
+							<div class="order__title_2 order__title_mob">Дата</div>
+							<div class="order__text order__text_date">15.08.2014</div>
+						</div>
+						<div class="col-md-2 col-xs-12">
+							<div class="order__title_2 order__title_mob">Пользователь</div>
+							<div class="order__text order__text_name">vasya-admin</div>
+						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="order__text">Аккуратнее с этим клиентом, очень не любит North, лучше хвалите Кабрину!</div>
 						<div class="input">
-							<div class="input__row"><textarea></textarea></div>
+							<div class="input__row input__row_area"><textarea></textarea></div>
 						</div>
-						<button class="btn btn_green">Комментировать</button>
+						<button class="btn btn_green btn_mod">Комментировать</button>
 					</div>
 				</div>
 			</div>
+			<!-- END comments -->
+			<!-- BEGIN history -->
+			<div class="col-md-12">
+				<div class="order__title order__title_mod">История заказа</div>
+			</div>
+			<div class="col-md-12 consist">
+				<table class="table">
+					<tr>
+						<th class="col-md-2">Дата</th>
+						<th class="col-md-4">Событие</th>
+						<th class="col-md-6">Пользователь</th>
+					</tr>
+					<tr>
+						<td>12.08.2014</td>
+						<td>Заказ создан</td>
+						<td>roma-sbend</td>
+					</tr>
+					<tr>
+						<td>12.08.2014</td>
+						<td>Подтверждено наличие товара у </td>
+						<td>vasya-admin</td>
+					</tr>
+					<tr>
+						<td>12.08.2014</td>
+						<td>Клиент оплатил заказ пластиковой картой</td>
+						<td>roma-sbend</td>
+					</tr>
+					<tr>
+						<td>12.08.2014</td>
+						<td>Заказ отгружен в службу доставки</td>
+						<td>vasya-admin</td>
+					</tr>
+				</table>
+				<div class="consist__mob">
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Дата</div>
+							<div class="col-xs-8">12.08.2014</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Событие</div>
+							<div class="col-xs-8">Заказ создан</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Пользователь</div>
+							<div class="col-xs-8">roma-sbend</div>		
+						</div>
+					</div>
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Дата</div>
+							<div class="col-xs-8">12.08.2014</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Событие</div>
+							<div class="col-xs-8">Заказ создан</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Пользователь</div>
+							<div class="col-xs-8">roma-sbend</div>		
+						</div>
+					</div>
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Дата</div>
+							<div class="col-xs-8">12.08.2014</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Событие</div>
+							<div class="col-xs-8">Заказ создан</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Пользователь</div>
+							<div class="col-xs-8">roma-sbend</div>		
+						</div>
+					</div>
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Дата</div>
+							<div class="col-xs-8">12.08.2014</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Событие</div>
+							<div class="col-xs-8">Заказ создан</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Пользователь</div>
+							<div class="col-xs-8">roma-sbend</div>		
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END history -->
+			<!-- BEGIN consist -->
+			<div class="col-md-12">
+				<div class="order__title order__title_mod">Список заказов</div>
+			</div>
+			<div class="col-md-12 consist">
+				<table class="table">
+					<tr>
+						<th class="col-md-2">Заказ</th>
+						<th class="col-md-3">Город</th>
+						<th class="col-md-2">Сумма</th>
+						<th class="col-md-2">Доставка</th>
+						<th class="col-md-2">Оплата</th>
+					</tr>
+					<tr>
+						<td>34003</td>
+						<td>Москва</td>
+						<td>47 988</td>
+						<td>Курьер</td>
+						<td>В кредит</td>
+					</tr>
+					<tr>
+						<td>34003</td>
+						<td>Санкт-Петербург</td>
+						<td>22 988</td>
+						<td>Курьер</td>
+						<td>Карта онлайн</td>
+					</tr>
+					<tr>
+						<td>34003</td>
+						<td>Москва</td>
+						<td>22 988</td>
+						<td>Курьер</td>
+						<td>Карта онлайн</td>
+					</tr>
+					<tr>
+						<td>34003</td>
+						<td>Санкт-Петербург</td>
+						<td>22 988</td>
+						<td>Курьер</td>
+						<td>Карта онлайн</td>
+					</tr>
+				</table>
+				<div class="consist__mob">
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Заказ</div>
+							<div class="col-xs-8">34003</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Город</div>
+							<div class="col-xs-8">Москва</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Сумма</div>
+							<div class="col-xs-8">47 988</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Доставка</div>
+							<div class="col-xs-8">Курьер</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Оплата</div>
+							<div class="col-xs-8">В кредит</div>		
+						</div>
+					</div>
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Заказ</div>
+							<div class="col-xs-8">34003</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Город</div>
+							<div class="col-xs-8">Москва</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Сумма</div>
+							<div class="col-xs-8">47 988</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Доставка</div>
+							<div class="col-xs-8">Курьер</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Оплата</div>
+							<div class="col-xs-8">В кредит</div>		
+						</div>
+					</div>
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Заказ</div>
+							<div class="col-xs-8">34003</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Город</div>
+							<div class="col-xs-8">Москва</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Сумма</div>
+							<div class="col-xs-8">47 988</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Доставка</div>
+							<div class="col-xs-8">Курьер</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Оплата</div>
+							<div class="col-xs-8">В кредит</div>		
+						</div>
+					</div>
+					<div class="consist__item">
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Заказ</div>
+							<div class="col-xs-8">34003</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Город</div>
+							<div class="col-xs-8">Москва</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Сумма</div>
+							<div class="col-xs-8">47 988</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Доставка</div>
+							<div class="col-xs-8">Курьер</div>		
+						</div>
+						<div class="consist__row row">
+							<div class="col-xs-4 consist__title">Оплата</div>
+							<div class="col-xs-8">В кредит</div>		
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END consist -->
 		</div>
 	</div>
 	<!-- END container-->

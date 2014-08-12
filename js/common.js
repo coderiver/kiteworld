@@ -41,6 +41,41 @@ head.ready(function() {
 			event.stopPropagation();
 	});
 
+	$(document).click(function() {
+        $(".js-select-list2").hide();
+        $(".js-select2").removeClass("is-active");
+    });
+    function selectList2() {
+        var select = $(".js-select2");
+        var select_list = $(".js-select-list2");
+        $("body").on("click", ".js-select2", function(event){
+            if ($(this).hasClass("is-active")) {
+                select.removeClass("is-active");
+                select_list.hide();
+            }
+            else {
+                select.removeClass("is-active");
+                select_list.hide();
+                $(this).find(".js-select-list2").show();
+                $(this).addClass("is-active");
+            }
+            event.stopPropagation();
+        });
+        $("body").on("click", ".js-select-list2 li", function(event){
+            var id = $(this).attr("data-id");
+            var text = $(this).text();
+            $(this).parents(".js-select2").find(".js-select-text").text(text);
+            $(this).parents(".js-select2").find(".js-select-input").val(id);
+            $(this).parent().hide();
+            $(this).parents(".js-select2").removeClass("is-active");
+            event.stopPropagation();
+        });
+    }  
+    selectList2();
+    $("body").on("click", ".js-select2", function(event){
+        event.stopPropagation();
+    });
+
 	function tab() {
 		$(".js-tab").each(function(){
 			var tab_link = $(this).find("a");
@@ -140,4 +175,21 @@ head.ready(function() {
 		// options
 		itemSelector: '.clause__item'
 	});
+	
+	$(".js-setting-top").click(function(){
+		$(this).hide();
+		$(".js-setting-item, .js-filter").slideToggle();
+		$(".js-closebtn").show();
+	});
+
+	$(".js-btn-setting, .js-closebtn").click(function(){
+		$(".js-closebtn").show();
+		$(".js-setting-top").slideToggle();
+		$(".js-setting-item, .js-filter").slideToggle();
+	});
+});
+
+$(window).load(function() {
+    $('.out').removeClass('is-loading');
+    $('.loader').hide().remove();
 });
