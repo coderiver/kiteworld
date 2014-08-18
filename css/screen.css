@@ -371,6 +371,8 @@ body .loader { position: absolute; top: 50%; left: 50%; margin: -92px 0 0 -130px
 .filter .filter__block .btn, .filter .filter__block .checkbox { width: 100%; }
 .filter .filter__block .filter__pref { position: absolute; top: 20px; left: 20px; background: url("../img/svg/arr-filter.svg") no-repeat 0 0; -moz-background-size: 14px 22px 100%; -webkit-background-size: 14px 22px 100%; background-size: 14px 22px 100%; width: 14px; height: 22px; display: inline-block; }
 
+.index-ul { padding: 60px 0; }
+
 .filter__item_open .select-2 .select__list { position: relative; z-index: 1; display: block; }
 
 .footer { color: #b2b2b2; font-size: 16px; overflow: hidden; background: #333333; *zoom: 1; }
