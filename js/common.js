@@ -178,15 +178,32 @@ head.ready(function() {
 	
 	$(".js-setting-top").click(function(){
 		$(this).hide();
-		$(".js-setting-item, .js-filter").slideToggle();
-		$(".js-closebtn").show();
+		$(".js-setting-item").slideToggle();
 	});
 
-	$(".js-btn-setting, .js-closebtn").click(function(){
-		$(".js-closebtn").show();
-		$(".js-setting-top").slideToggle();
-		$(".js-setting-item, .js-filter").slideToggle();
+	$(".js-setting-item").click(function(){
+		$(".js-filter").show();
+	})
+
+	$(".js-closebtn").click(function(){
+		$(".js-filter").hide();
 	});
+
+	$(".js-filter-par").click(function(){
+		$(".js-filter-block").show();
+		$('body').addClass("is-hidden");
+	});
+
+	$(".js-close-fblock").click(function(){
+		$(".js-filter-block").hide();
+		$('body').removeClass("is-hidden");
+	});
+
+	// $(".js-btn-setting, .js-closebtn").click(function(){
+	// 	$(".js-closebtn").show();
+	// 	$(".js-setting-top").slideToggle();
+	// 	$(".js-setting-item, .js-filter").slideToggle();
+	// });
 });
 
 $(window).load(function() {

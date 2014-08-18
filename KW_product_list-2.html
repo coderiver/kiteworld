@@ -13,7 +13,7 @@
 <body>
 
 <!-- BEGIN  out-->
-<div class="out">
+<div class="out is-loading">
 	<!-- BEGIN header -->
 	<header class="header bs-docs-header" id="top">
 		<!-- BEGIN container -->
@@ -158,7 +158,7 @@
 		<!-- BEGIN row -->
 		<div class="row filter">
 			<div class="col-md-12 filter__top">
-				<div class="title pull-left">Кайды</div>
+				<div class="title pull-left">Кайты</div>
 				<div class="filter__sorting pull-right">
 					<div class="filter__select-2 select-2 js-select2">
 						<span class="select__name">Сортировка:</span>
@@ -172,78 +172,87 @@
 						</ul>
 					</div>
 				</div>
-				<div class="filter__setting">
-					<div class="select-2 js-select2">
-						<span class="select__name">Сортировка:</span>
-						<span class="select__text js-select-text">самые дешевые</span>
-						<input type="hidden" class="js-select-input" value="0">
-						<ul class="select__list js-select-list2">
-							<li data-id="0">item1</li>
-							<li data-id="1">item2</li>
-							<li data-id="2">item3</li>
-							<li data-id="3">item4</li>
-						</ul>
+				<div class="filter__setting setting">
+					<button class="setting__btn js-btn-setting"></button>
+					<div class="setting__top js-setting-top">Настроить фильтр</div>
+					<div class="setting__item js-setting-item">
+						<div class="setting__row">
+							<div class="setting__title">Бренд:</div>
+							<div class="setting__text">North, Slingshot, Cabrinha, Advance, F-One ... </div>
+						</div>
+						<div class="setting__row">
+							<div class="setting__title">Год:</div>
+							<div class="setting__text">2014 и 2013 </div>
+						</div>
+						<div class="setting__row">
+							<div class="setting__text">Фрирайд, фристайл, вэйкстайл, ...</div>
+						</div>
+						<div class="setting__row">
+							<div class="setting__title">Сортировка:</div>
+							<div class="setting__text">Самые дешевые</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="filter__item col-md-3 col-sm-3">
+			<div class="filter__item filter__item_open filter__item_desc col-md-3 col-sm-3">
+				<button class="filter__closebtn js-closebtn"></button>
 				<div class="filter__row">
-					<div class="select-2 js-select">
+					<div class="select-2 js-select is-active">
 						<span class="select__text js-select-text">Размеры</span>
 						<input type="hidden" class="js-select-input" value="0">
 						<ul class="select__list js-select-list">
 							<li data-id="0">
-								<label class="order__checkbox checkbox col-md-12">
+								<label class="checkbox col-md-12">
 									<input type="checkbox">
 									<span>Все</span>
 								</label>
 							</li>
 							<li data-id="1">
-								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
 									<input type="checkbox" checked="checked">
 									<span>17</span>
 								</label>
-								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
 									<input type="checkbox" checked="checked">
 									<span>8</span>
 								</label>
 							</li>
 							<li data-id="2">
-								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
 									<input type="checkbox">
 									<span>17</span>
 								</label>
-								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
 									<input type="checkbox">
 									<span>8</span>
 								</label>
 							</li>
 							<li data-id="3">
-								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
 									<input type="checkbox">
 									<span>17</span>
 								</label>
-								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
 									<input type="checkbox">
 									<span>8</span>
 								</label>
 							</li>
 							<li data-id="4">
-								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
 									<input type="checkbox">
 									<span>17</span>
 								</label>
-								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
 									<input type="checkbox">
 									<span>8</span>
 								</label>
 							</li>
 							<li data-id="5">
-								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
 									<input type="checkbox">
 									<span>17</span>
 								</label>
-								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
 									<input type="checkbox">
 									<span>8</span>
 								</label>
@@ -252,7 +261,7 @@
 					</div>
 				</div>
 				<div class="filter__row">
-					<div class="select-2 js-select">
+					<div class="select-2 js-select is-active">
 						<span class="select__text js-select-text">Год</span>
 						<input type="hidden" class="js-select-input" value="0">
 						<ul class="select__list js-select-list">
@@ -296,6 +305,206 @@
 					</div>
 				</div>
 				<div class="filter__row">
+					<div class="select-2 js-select is-active">
+					    <span class="select__text js-select-text">Бренд:</span>
+					    <input type="hidden" class="js-select-input" value="0">
+					    <ul class="select__list select__list_white js-select-list">
+							<li data-id="0">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>Все</span>
+								</label>
+							</li>
+							<li data-id="1">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox" checked="checked">
+									<span>Advance</span>
+								</label>
+							</li>
+							<li data-id="2">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>Airush</span>
+								</label>
+							</li>
+							<li data-id="3">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>ASV</span>
+								</label>
+							</li>
+							<li data-id="4">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>Cabrinha</span>
+								</label>
+							</li>
+							<li data-id="5">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>Flexifoil</span>
+								</label>
+							</li>
+							<li data-id="6">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>F-One</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="filter__row">
+					<div class="select-2 js-select is-active">
+						<span class="select__text js-select-text">Назначение:</span>
+						<input type="hidden" class="js-select-input" value="0">
+						<ul class="select__list js-select-list">
+							<li data-id="0">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>Все</span>
+								</label>
+							</li>
+							<li data-id="1">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox" checked="checked">
+									<span>Фрирайд</span>
+								</label>
+							</li>
+							<li data-id="2">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>Фристайл</span>
+								</label>
+							</li>
+							<li data-id="3">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>Рейс</span>
+								</label>
+							</li>
+							<li data-id="4">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>Вейврайдинг</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<button class="btn btn_green">Показать товары</button>
+			</div>
+			<div class="filter__item filter__item_mob col-md-3 col-sm-3 js-filter">
+				<button class="filter__closebtn js-closebtn"></button>
+				<div class="filter__row js-filter-par">
+					<div class="select-2 js-select">
+						<span class="select__text js-select-text">Размеры</span>
+						<input type="hidden" class="js-select-input" value="0">
+						<ul class="select__list js-select-list">
+							<li data-id="0">
+								<label class="checkbox col-md-12">
+									<input type="checkbox">
+									<span>Все</span>
+								</label>
+							</li>
+							<li data-id="1">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox" checked="checked">
+									<span>17</span>
+								</label>
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox" checked="checked">
+									<span>8</span>
+								</label>
+							</li>
+							<li data-id="2">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>17</span>
+								</label>
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>8</span>
+								</label>
+							</li>
+							<li data-id="3">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>17</span>
+								</label>
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>8</span>
+								</label>
+							</li>
+							<li data-id="4">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>17</span>
+								</label>
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>8</span>
+								</label>
+							</li>
+							<li data-id="5">
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>17</span>
+								</label>
+								<label class="checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>8</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="filter__row js-filter-par">
+					<div class="select-2 js-select">
+						<span class="select__text js-select-text">Год</span>
+						<input type="hidden" class="js-select-input" value="0">
+						<ul class="select__list js-select-list">
+							<li data-id="0">
+								<label class="order__checkbox checkbox col-md-12">
+									<input type="checkbox">
+									<span>Все</span>
+								</label>
+							</li>
+							<li data-id="1">
+								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox" checked="checked">
+									<span>2015</span>
+								</label>
+								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox" checked="checked">
+									<span>2012</span>
+								</label>
+							</li>
+							<li data-id="2">
+								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>2014</span>
+								</label>
+								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>2011</span>
+								</label>
+							</li>
+							<li data-id="3">
+								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>2013</span>
+								</label>
+								<label class="order__checkbox checkbox col-md-6 col-sm-6 col-xs-6">
+									<input type="checkbox">
+									<span>2010</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="filter__row js-filter-par">
 					<div class="select-2 js-select">
 					    <span class="select__text js-select-text">Бренд:</span>
 					    <input type="hidden" class="js-select-input" value="0">
@@ -327,7 +536,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="filter__row">
+				<div class="filter__row js-filter-par">
 					<div class="select-2 js-select">
 						<span class="select__text js-select-text">Назначение:</span>
 						<input type="hidden" class="js-select-input" value="0">
@@ -359,12 +568,161 @@
 						</ul>
 					</div>
 				</div>
+				<button class="btn btn_green">Показать товары</button>
+			</div>
+			<div class="filter__block js-filter-block">
+				<div class="filter__title">Бренд:</div>
+				<button class="filter__closebtn js-close-fblock"></button>
+				<button class="filter__pref js-close-fblock"></button>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Все</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Advance</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox" checked="checked">
+					<span>Airush</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>ASV</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Cabrinha</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Flexifoil</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>F-One</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Genetrix</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>GIN</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Griffin</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>JN</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Naish</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Nobile</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>North</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Ozone</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Royal</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Slingshot</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Takoon</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Wainman</span>
+				</label>
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Zeeko</span>
+				</label>
+				<button class="btn btn_green">Выбрать</button>
 			</div>
 			<div class="col-md-9 col-sm-9 col-xs-12">
 				<!-- BEGIN row -->
 				<div class="row">
-					<div class="col-md-12">
-						<div class="filter__text">Вашим условиям не удовлетворяет ни один товар...</div>
+					<div class="col-md-4 col-sm-6  kate">
+						<a href="#" class="kate__img">
+							<img src="img/img1.png" alt="img">
+							<span class="kate__info">new</span>
+						</a>
+						<a href="#" class="kate__text">North</a>
+						<a href="#" class="kate__name">Evo ‘13</a>
+						<div class="kate__prise">45000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 kate">
+						<a href="#" class="kate__img">
+							<img src="img/img1.png" alt="img">
+							<span class="kate__info kate__info_red">-10%</span>
+						</a>
+						<a href="#" class="kate__text">North</a>
+						<a href="#" class="kate__name">Vegas ‘13</a>
+						<div class="kate__prise">46000 <img src="img/ruble.gif" alt="img" class="ruble"> <span class="kate__prise-red">44055 <img src="img/ruble-red.gif" alt="img" class="ruble"></span></div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 kate">
+						<a href="#" class="kate__img">
+							<img src="img/img1.png" alt="img">
+						</a>
+						<a href="#" class="kate__text">North</a>
+						<a href="#" class="kate__name">Rebel ‘13</a>
+						<div class="kate__prise">42000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 kate">
+						<a href="#" class="kate__img">
+							<img src="img/img1.png" alt="img">
+							<span class="kate__info">new</span>
+						</a>
+						<a href="#" class="kate__text">Cabrinha</a>
+						<a href="#" class="kate__name">Switchblade ‘13</a>
+						<div class="kate__prise">49000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 kate">
+						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
+						<a href="#" class="kate__text">Cabrinha</a>
+						<a href="#" class="kate__name">Drifter ‘13</a>
+						<div class="kate__prise">46000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 kate">
+						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
+						<a href="#" class="kate__text">Cabrinha</a>
+						<a href="#" class="kate__name">Vector ‘13</a>
+						<div class="kate__prise">42000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 kate">
+						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
+						<a href="#" class="kate__text">Ozone</a>
+						<a href="#" class="kate__name">C4 ‘13</a>
+						<div class="kate__prise">46000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 kate">
+						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
+						<a href="#" class="kate__text">Ozone</a>
+						<a href="#" class="kate__name">Reo ‘13</a>
+						<div class="kate__prise">44000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 kate">
+						<a href="#" class="kate__img"><img src="img/img1.png" alt="img"></a>
+						<a href="#" class="kate__text">Ozone</a>
+						<a href="#" class="kate__name">Uno ‘13</a>
+						<div class="kate__prise">44000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
 					</div>
 				</div>
 				<!-- END row -->
@@ -501,6 +859,9 @@
 	<!-- END footer -->
 </div>
 <!-- END out-->
+<!-- BEGIN loader -->
+<div class="loader"><img src="img/loader.gif" alt="img"></div>
+<!-- END loader -->
 
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
