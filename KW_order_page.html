@@ -21,8 +21,10 @@
 			<a href="#" class="header__logo"></a>
 			<div class="col-md-1"></div>
 			<div class="col-md-4 header__info">
-				<div class="header__phone">8-800-2000-600</div>
-				<a href="#" class="header__mail">zakaz@kiteworld.ru</a>
+				<div class="header__text">
+					<div class="header__phone">8-800-2000-600</div>
+					<a href="#" class="header__mail">zakaz@kiteworld.ru</a>
+				</div>
 			</div>
 			<ul class="col-md-7 menu navbar-nav navbar-right">
 				<li class="menu__item">
@@ -289,127 +291,129 @@
 					<div class="consist__item">
 						<div class="consist__row row">
 							<div class="col-xs-4 consist__title">Итого к оплате</div>
-							<div class="col-xs-8"><div class="price">69 999<del>P</del></div></div>		
+							<div class="col-xs-8"><div class="price">69 999<span class="ruble"></span></div></div>		
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- END consist -->
-			<!-- BEGIN actions -->
-			<div class="col-md-12">
-				<div class="order__title">Действия по заказу</div>
-			</div>
-			<div class="col-md-12">
-				<div class="col-md-6">
-					<!-- BEGIN checkbox -->
-					<label class="order__checkbox checkbox">
-						<input type="checkbox" checked="checked">
-						<span>Товары есть в наличии на складе KW</span>
-					</label>
-					<label class="order__checkbox checkbox">
-						<input type="checkbox" checked="checked">
-						<span>Товары забронированы у Поставщиков</span>
-					</label>
-					<label class="order__checkbox checkbox">
-						<input type="checkbox" checked="checked">
-						<span>Магазин получил подтверждение выдачи кредита клиенту</span>
-					</label>
-					<label class="order__checkbox checkbox">
-						<input type="checkbox" checked="checked">
-						<span>Товары от Поставщиков есть в наличии на складе KW</span>
-					</label>
-					<label class="order__checkbox checkbox">
-						<input type="checkbox">
-						<span>Заказ передан в службу доставки</span>
-					</label>
-					<!-- END checkbox -->
+			<div class="row">
+				<!-- BEGIN actions -->
+				<div class="col-md-12">
+					<div class="order__title">Действия по заказу</div>
 				</div>
-				<div class="col-md-6">
-					<!-- BEGIN checkbox -->
-					<label class="order__checkbox checkbox">
-						<input type="checkbox">
-						<span>Заказ отменён</span>
-					</label>
-					<!-- END checkbox -->
-				</div>
-			</div>
-			<!-- END actions -->
-			<!-- BEGIN info -->
-			<div class="order__info col-md-12">
-				<div class="order__delivery col-md-4">
-					<div class="order__row">
-						<div class="order__title order__title_mod">Доставка</div>
-						<button class="btn btn_green"><i></i></button>
+				<div class="col-md-12">
+					<div class="col-md-6">
+						<!-- BEGIN checkbox -->
+						<label class="order__checkbox checkbox">
+							<input type="checkbox" checked="checked">
+							<span>Товары есть в наличии на складе KW</span>
+						</label>
+						<label class="order__checkbox checkbox">
+							<input type="checkbox" checked="checked">
+							<span>Товары забронированы у Поставщиков</span>
+						</label>
+						<label class="order__checkbox checkbox">
+							<input type="checkbox" checked="checked">
+							<span>Магазин получил подтверждение выдачи кредита клиенту</span>
+						</label>
+						<label class="order__checkbox checkbox">
+							<input type="checkbox" checked="checked">
+							<span>Товары от Поставщиков есть в наличии на складе KW</span>
+						</label>
+						<label class="order__checkbox checkbox">
+							<input type="checkbox">
+							<span>Заказ передан в службу доставки</span>
+						</label>
+						<!-- END checkbox -->
 					</div>
-					<div class="order__text order__text_type">Курьерская доставка</div>
-					<div class="order__text order__text_city">Москва</div>
-					<div class="order__text order__text_address">улица Текстильщиков, 19Б/5</div>
-				</div>
-				<div class="order__payment col-md-4">
-					<div class="order__row">
-						<div class="order__title order__title_mod">Оплата</div>
-						<button class="btn btn_green"><i></i></button>
-					</div>
-					<div class="order__text order__text_type">Курьерская доставка</div>
-					<div class="order__text order__text_city">Москва</div>
-					<div class="order__text order__text_address">улица Текстильщиков, 19Б/5</div>
-					<div class="order__text order__text_link">Ссылка на страницу оплаты</div>
-					<div class="input">
-						<div class="input__row"><input type="text" placeholder="http://kiteworld.ru/o/344334"></div>
+					<div class="col-md-6">
+						<!-- BEGIN checkbox -->
+						<label class="order__checkbox checkbox">
+							<input type="checkbox">
+							<span>Заказ отменён</span>
+						</label>
+						<!-- END checkbox -->
 					</div>
 				</div>
-				<div class="order__client col-md-4">
-					<div class="order__title order__title_mod">Заказчик</div>
-					<div class="order__text order__text_snp">Козлов Сергей Николаевич</div>
-					<div class="order__text order__text_mail">kozlov@email.com</div>
-					<div class="order__text order__text_phone">+788339476745</div>
-				</div>
-			</div>
-			<!-- END info -->
-			<!-- BEGIN comments -->
-			<div class="col-md-12">
-				<div class="order__title">Комментарии</div>
-				<div class="order__item order__item_mar">
-					<div class="row-xs">
-						<div class="col-md-2 col-sm-2 col-xs-12">
-							<div class="order__title_2">Дата</div>
-							<div class="order__text order__text_date">12.08.2014</div>
+				<!-- END actions -->
+				<!-- BEGIN info -->
+				<div class="order__info col-md-12">
+					<div class="order__delivery col-md-4">
+						<div class="order__row">
+							<div class="order__title order__title_mod">Доставка</div>
+							<button class="btn btn_green"><i></i></button>
 						</div>
-						<div class="col-md-2 col-sm-2 col-xs-12">
-							<div class="order__title_2">Пользователь</div>
-							<div class="order__text order__text_name">roma-sbend</div>
+						<div class="order__text order__text_type">Курьерская доставка</div>
+						<div class="order__text order__text_city">Москва</div>
+						<div class="order__text order__text_address">улица Текстильщиков, 19Б/5</div>
+					</div>
+					<div class="order__payment col-md-4">
+						<div class="order__row">
+							<div class="order__title order__title_mod">Оплата</div>
+							<button class="btn btn_green"><i></i></button>
+						</div>
+						<div class="order__text order__text_type">Курьерская доставка</div>
+						<div class="order__text order__text_city">Москва</div>
+						<div class="order__text order__text_address">улица Текстильщиков, 19Б/5</div>
+						<div class="order__text order__text_link">Ссылка на страницу оплаты</div>
+						<div class="input input_focus">
+							<div class="input__row"><input type="text" placeholder="http://kiteworld.ru/o/344334"></div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="order__text">Прошу вас перезвонить за полчаса до доставки, чтобы я успел помыть свою 
-						голову перед встречей курьера. Спасибо большое, очень жду своего нового кайта!  
-						Во дворе злая собака, может укусить. 
-						Лучше принесите косточку с собой, она любит говядину.</div>
+					<div class="order__client col-md-4">
+						<div class="order__title order__title_mod">Заказчик</div>
+						<div class="order__text order__text_snp">Козлов Сергей Николаевич</div>
+						<div class="order__text order__text_mail">kozlov@email.com</div>
+						<div class="order__text order__text_phone">+788339476745</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-12">
-				<div class="order__item">
-					<div class="row-xs">
-						<div class="col-md-2 col-xs-12">
-							<div class="order__title_2 order__title_mob">Дата</div>
-							<div class="order__text order__text_date">15.08.2014</div>
+				<!-- END info -->
+				<!-- BEGIN comments -->
+				<div class="col-md-12">
+					<div class="order__title">Комментарии</div>
+					<div class="order__item order__item_mar">
+						<div class="row-xs">
+							<div class="col-md-2 col-sm-2 col-xs-12">
+								<div class="order__title_2">Дата</div>
+								<div class="order__text order__text_date">12.08.2014</div>
+							</div>
+							<div class="col-md-2 col-sm-2 col-xs-12">
+								<div class="order__title_2">Пользователь</div>
+								<div class="order__text order__text_name">roma-sbend</div>
+							</div>
 						</div>
-						<div class="col-md-2 col-xs-12">
-							<div class="order__title_2 order__title_mob">Пользователь</div>
-							<div class="order__text order__text_name">vasya-admin</div>
+						<div class="col-md-4">
+							<div class="order__text">Прошу вас перезвонить за полчаса до доставки, чтобы я успел помыть свою 
+							голову перед встречей курьера. Спасибо большое, очень жду своего нового кайта!  
+							Во дворе злая собака, может укусить. 
+							Лучше принесите косточку с собой, она любит говядину.</div>
 						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="order__text">Аккуратнее с этим клиентом, очень не любит North, лучше хвалите Кабрину!</div>
-						<div class="input">
-							<div class="input__row input__row_area"><textarea></textarea></div>
-						</div>
-						<button class="btn btn_green btn_mod">Комментировать</button>
 					</div>
 				</div>
+				<div class="col-md-12">
+					<div class="order__item">
+						<div class="row-xs">
+							<div class="col-md-2 col-xs-12">
+								<div class="order__title_2 order__title_mob">Дата</div>
+								<div class="order__text order__text_date">15.08.2014</div>
+							</div>
+							<div class="col-md-2 col-xs-12">
+								<div class="order__title_2 order__title_mob">Пользователь</div>
+								<div class="order__text order__text_name">vasya-admin</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="order__text">Аккуратнее с этим клиентом, очень не любит North, лучше хвалите Кабрину!</div>
+							<div class="input">
+								<div class="input__row input__row_area"><textarea></textarea></div>
+							</div>
+							<button class="btn btn_green btn_mod">Комментировать</button>
+						</div>
+					</div>
+				</div>
+				<!-- END comments -->
 			</div>
-			<!-- END comments -->
 			<!-- BEGIN history -->
 			<div class="col-md-12">
 				<div class="order__title order__title_mod">История заказа</div>
@@ -443,7 +447,7 @@
 					</tr>
 				</table>
 				<div class="consist__mob">
-					<div class="consist__item">
+					<div class="consist__item consist__item_first">
 						<div class="consist__row row">
 							<div class="col-xs-4 consist__title">Дата</div>
 							<div class="col-xs-8">12.08.2014</div>		
@@ -545,7 +549,7 @@
 					</tr>
 				</table>
 				<div class="consist__mob">
-					<div class="consist__item">
+					<div class="consist__item consist__item_first">
 						<div class="consist__row row">
 							<div class="col-xs-4 consist__title">Заказ</div>
 							<div class="col-xs-8">34003</div>		
@@ -649,14 +653,15 @@
 					<div class="footer__row">
 						<a href="#" class="footer__title-2">Магазин</a>
 						<ul class="footer__list">
-							<li><a href="#">Поясные</a></li>
-							<li><a href="#">Сидячие</a></li>
-							<li><a href="#">Комби</a></li>
-							<li><a href="#">Сноукайтборды</a></li>
-							<li><a href="#">Сноуборды</a></li>
-							<li><a href="#">Крепления</a></li>
-							<li><a href="#">Ботинки</a></li>
+							<li><a href="#">Кайты</a></li>
+							<li><a href="#">Кайтборды и аксессуары</a></li>
+							<li><a href="#">Трапеции</a></li>
+							<li><a href="#">Сноукайтборды и аксессуары</a></li>
+							<li><a href="#">Гидроодежда</a></li>
 							<li><a href="#">Защита</a></li>
+							<li><a href="#">Одежда</a></li>
+							<li><a href="#">Аксессуары</a></li>
+							<li><a href="#">Распродажа</a><span class="discount">-65%</span></a></li>
 						</ul>
 					</div>
 				</div>

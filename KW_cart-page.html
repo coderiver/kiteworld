@@ -8,6 +8,7 @@
 	<link rel="stylesheet" media="screen" href="css/slick.css" >
 	<link rel="stylesheet" media="screen" href="css/bootstrap.min.css" >
 	<link rel="stylesheet" media="screen" href="css/bootstrap-select.css" >
+	<link rel="stylesheet" media="screen" href="css/fontello.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
@@ -21,8 +22,10 @@
 			<a href="#" class="header__logo"></a>
 			<div class="col-md-1"></div>
 			<div class="col-md-4 header__info">
-				<div class="header__phone">8-800-2000-600</div>
-				<a href="#" class="header__mail">zakaz@kiteworld.ru</a>
+				<div class="header__text">
+					<div class="header__phone">8-800-2000-600</div>
+					<a href="#" class="header__mail">zakaz@kiteworld.ru</a>
+				</div>
 			</div>
 			<ul class="col-md-7 menu navbar-nav navbar-right">
 				<li class="menu__item">
@@ -141,7 +144,7 @@
 	<!-- END header -->
 	<!-- BEGIN container pay -->
 	<div class="container pay pay_top">
-		<button class="pay__info js-info"></button>
+		<button class="pay__info js-info"><i></i></button>
 		<div class="row">
 			<div class="col-md-12"><h3 class="title">Корзина</h3></div>
 			<div class="pay__left col-md-9 col-sm-12">
@@ -167,16 +170,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-2 col-sm-3 col-xs-6">
+					<div class="col-md-2 col-sm-3 col-xs-8 pad-mob">
 						<select class="selectpicker select">
 							<option>item1</option>
 							<option>item2</option>
 							<option>item3</option>
 						</select>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<div class="price">16 000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
-						<div class="discount">48 000 <img src="img/ruble-red.gif" alt="img" class="ruble"> - <strong>25</strong>%</div>
+					<div class="col-md-3 col-sm-3 col-xs-4">
+						<div class="price">16 000 <span class="ruble"></span></div>
+						<div class="discount">48 000 <span class="ruble"></span> - <strong>25</strong>%</div>
 					</div>
 				</div>
 				<div class="pay__row row">
@@ -190,15 +193,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-2 col-sm-3 col-xs-6">
+					<div class="col-md-2 col-sm-3 col-xs-8 pad-mob">
 						<select class="selectpicker select">
 							<option>item1</option>
 							<option>item2</option>
 							<option>item3</option>
 						</select>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<div class="price">16 000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					<div class="col-md-3 col-sm-3 col-xs-4">
+						<div class="price">16 000 <span class="ruble"></span></div>
 					</div>
 				</div>
 				<div class="pay__row row">
@@ -212,21 +215,21 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-2 col-sm-3 col-xs-6">
+					<div class="col-md-2 col-sm-3 col-xs-8 pad-mob">
 						<select class="selectpicker select">
 							<option>item1</option>
 							<option>item2</option>
 							<option>item3</option>
 						</select>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<div class="price">16 000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					<div class="col-md-3 col-sm-3 col-xs-4">
+						<div class="price">16 000 <span class="ruble"></span></div>
 					</div>
 				</div>
 				<div class="pay__row pay__row_mod pay__border"></div>
 				<div class="pay__row pay__row_mod row">
 					<div class="col-md-9 col-sm-9 col-xs-8 pay__col ">Общая стоимость товаров</div>
-					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">55 000 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
+					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">55 000 <span class="ruble"></span></div></div>
 				</div>
 				<div class="pay__row pay__row_mod row">
 					<div class="col-md-9 col-sm-9 col-xs-8 pay__col">Номер карты постоянного клиента</div>
@@ -238,12 +241,12 @@
 				</div>
 				<div class="pay__row pay__row_mod row">
 					<div class="col-md-9 col-sm-9 col-xs-8 pay__col">Накопительная скидка с прошлого заказа</div>
-					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">3 000 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
+					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">3 000 <span class="ruble"></span></div></div>
 				</div>
 				<div class="pay__row pay__border"></div>
 				<div class="pay__row row">
 					<div class="col-md-9 col-sm-9 col-xs-8 pay__col"><div class="pay__title">Итого к оплате</div></div>
-					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">52 000 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
+					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">52 000 <span class="ruble"></span></div></div>
 				</div>
 			</div>
 			<!-- BEGIN help -->
@@ -256,7 +259,7 @@
 					</li>
 					<li>Оставьте свой номер, и мы вам перезвоним.</li>
 					<li>
-						Свяжитесь по Skype:<br><a class="help__bold" href="#"><i class="help__ico-f"></i>kiteworld</a>
+						Свяжитесь по Skype:<br><a class="help__bold" href="#"><i class="icon-skype"></i>kiteworld</a>
 					</li>
 					<li>
 						Напишите нам:<br><a class="help__bold" href="#">info@kiteworld.ru</a>
@@ -314,106 +317,112 @@
 							</div>
 						</div>
 					</div>
-					<div class="pay__row row deliv">
-						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title">Способ доставки</div></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
-							<!-- BEGIN radiobatton -->
-							<label class="radiobatton">
+					<label class="pay__row deliv radiobatton radiobatton_mod">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title">Способ доставки</div></div>
+							<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
+								<!-- BEGIN radiobatton -->
 								<input type="radio" checked="checked" name="delivery">
 								<span>Курьерская доставка</span>
-							</label>
-							<!-- END radiobatton -->
-							<div class="pay__text">
-								Доставка осуществляется транспортными компаниями Желдорэкспедиция (www.jde.ru) . Срок доставки этими компаниями сильно зависит от места нахождения нашего клиента, так, например по нашей многолетней правктике доставка в ближайшие города москвы такие как Тверь,
+								<div class="pay__text">
+									Доставка осуществляется транспортными компаниями Желдорэкспедиция (www.jde.ru) . Срок доставки этими компаниями сильно зависит от места нахождения нашего клиента, так, например по нашей многолетней правктике доставка в ближайшие города москвы такие как Тверь,
+								</div>
+								<!-- END radiobatton -->
 							</div>
+							<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">3 000 <div class="ruble"></div></div></div>
 						</div>
-						<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">3 000 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
-					</div>
-					<div class="pay__row row deliv">
-						<div class="col-md-4 col-sm-4 col-xs-12"></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
-							<!-- BEGIN radiobatton -->
-							<label class="radiobatton">
+					</label>
+					<label class="pay__row deliv deliv_mod radiobatton radiobatton_mod">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-12"></div>
+							<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
+								<!-- BEGIN radiobatton -->
 								<input type="radio" name="delivery">
 								<span>Самовывоз</span>
-							</label>
-							<!-- END radiobatton -->
-							<div class="pay__text">
-								Заказ нужно будет забрать со склада нашего магазина. Дальше рассказ, как проехать к самовывозу.
+								<div class="pay__text">
+									Заказ нужно будет забрать со склада нашего магазина. Дальше рассказ, как проехать к самовывозу.
+								</div>
+								<!-- END radiobatton -->
 							</div>
-							<div class="pay__text">
+							<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">Бесплатно</div></div>
+						</div>
+					</label>
+					<div class="pay__row row">
+						<div class="col-md-4 col-sm-4 col-xs-12"></div>
+						<div class="col-md-6 col-sm-6 col-xs-7">
+							<div class="link">
 								<a href="#">Карта</a>
 								<a href="#">Как проехать</a>
 							</div>
 						</div>
-						<div class="col-md-2 col-sm-2 col-xs-5 col-grey">Бесплатно</div>
+						<div class="col-md-2 col-sm-2 col-xs-5"></div>
 					</div>
-					<div class="pay__row row deliv">
-						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title pay__title_mob">Способ оплаты</div></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
-							<!-- BEGIN radiobatton -->
-							<label class="radiobatton">
+					<label class="pay__row deliv radiobatton radiobatton_mod">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title">Способ оплаты</div></div>
+							<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
+								<!-- BEGIN radiobatton -->
 								<input type="radio" name="pay">
 								<span>Наличными курьеру</span>
-							</label>
-							<!-- END radiobatton -->
-							<div class="pay__text">
-								Курьер привозит к вам домой товары, вы оплачиваете при 
+								<div class="pay__text">
+									Курьер привозит к вам домой товары, вы оплачиваете при 
+								</div>
+								<!-- END radiobatton -->
 							</div>
+							<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">Бесплатно</div></div>
 						</div>
-						<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">Бесплатно</div></div>
-					</div>
-					<div class="pay__row row deliv">
-						<div class="col-md-4 col-sm-4 col-xs-12"></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
-							<!-- BEGIN radiobatton -->
-							<label class="radiobatton">
+					</label>
+					<label class="pay__row deliv radiobatton radiobatton_mod">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-12"></div>
+							<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
+								<!-- BEGIN radiobatton -->
 								<input type="radio" checked="checked" name="pay">
 								<span>Пластиковой картой</span>
-							</label>
-							<!-- END radiobatton -->
-							<div class="pay__text">
-								Удобный способ оплаты не выходя из своего дома! Можно пользоваться кредитными картами, чтобы кататься уже сейчас, а 
+								<div class="pay__text">
+									Удобный способ оплаты не выходя из своего дома! Можно пользоваться кредитными картами, чтобы кататься уже сейчас, а 
+								</div>
+								<!-- END radiobatton -->
 							</div>
+							<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">250 <div class="ruble"></div></div></div>
 						</div>
-						<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">250 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
-					</div>
-					<div class="pay__row row deliv">
-						<div class="col-md-4 col-sm-4 col-xs-12"></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
-							<!-- BEGIN radiobatton -->
-							<label class="radiobatton">
+					</label>
+					<label class="pay__row deliv radiobatton radiobatton_mod">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-12"></div>
+							<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
+								<!-- BEGIN radiobatton -->
 								<input type="radio" name="pay">
 								<span>Оформить кредит онлайн</span>
-							</label>
-							<!-- END radiobatton -->
-							<div class="pay__text">
-								Здесь кратко перечислить условия - сумма первого взноса, минимальная/максимальная покупка, какие документы требуются, как долго рассматривается заявка / оформляются документы.
+								<div class="pay__text">
+									Здесь кратко перечислить условия - сумма первого взноса, минимальная/максимальная покупка, какие документы требуются, как долго рассматривается заявка / оформляются документы.
+								</div>
+								<!-- END radiobatton -->
 							</div>
+							<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">Бесплатно</div></div>
 						</div>
-						<div class="col-md-2 col-sm-2 col-xs-5 col-grey"><div class="price">Бесплатно</div></div>
-					</div>
+					</label>
 					<div class="pay__row pay__border pay__border_none"></div>
 					<div class="pay__row pay__row_mod row">
 						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title pay__title_mob">Итого с доставкой</div></div>
 						<div class="col-md-6 col-sm-6 col-xs-7 pay__col">Стоимость товаров</div>
-						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">52 000 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
+						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">52 000 <span class="ruble"></span></div></div>
 					</div>
 					<div class="pay__row pay__row_mod row">
 						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title"></div></div>
 						<div class="col-md-6 col-sm-6 col-xs-7 pay__col">Доставка курьером по Москве</div>
-						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">3 000 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
+						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">3 000 <span class="ruble"></span></div></div>
 					</div>
 					<div class="pay__row row">
 						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title"></div></div>
 						<div class="col-md-6 col-sm-6 col-xs-7 pay__col">Комиссия за платёж пластиковой картой</div>
-						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">52 000 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
+						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">52 000 <span class="ruble"></span></div></div>
 					</div>
 					<div class="pay__row pay__border pay__border_block"></div>
 					<div class="pay__row row">
 						<div class="col-md-4 col-sm-4 col-xs-12"></div>
 						<div class="col-md-6 col-sm-6 col-xs-7 pay__col"><div class="pay__title">Сумма к оплате</div></div>
-						<div class="col-md-2 col-sm-2 col-xs-5 pay__col"><div class="price price_big">52 250 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
+						<div class="col-md-2 col-sm-2 col-xs-5 pay__col"><div class="price price_big">52 250 <span class="ruble"></span></div></div>
 					</div>
 				</div>
 			</div>
@@ -445,14 +454,14 @@
 							</div>
 						</div>
 						<p>Мы будем информировать вас о статусе вашего заказа по электронной почте. </p>
-						<p>
-							<!-- BEGIN checkbox -->
-							<label class="checkbox">
-								<input type="checkbox" checked="checked">
-								<span>Оформить кредит онлайн</span>
-							</label>
-							<!-- END checkbox -->
-						</p>
+						<!-- <p> -->
+						<!-- BEGIN checkbox -->
+						<label class="checkbox checkbox_mob">
+							<input type="checkbox" checked="checked">
+							<span>Я хочу подписаться на рассылку новостей и предложений.</span>
+						</label>
+						<!-- END checkbox -->
+						<!-- </p> -->
 					</div>
 				</div>
 				<div class="pay__row row">
@@ -500,14 +509,15 @@
 					<div class="footer__row">
 						<a href="#" class="footer__title-2">Магазин</a>
 						<ul class="footer__list">
-							<li><a href="#">Поясные</a></li>
-							<li><a href="#">Сидячие</a></li>
-							<li><a href="#">Комби</a></li>
-							<li><a href="#">Сноукайтборды</a></li>
-							<li><a href="#">Сноуборды</a></li>
-							<li><a href="#">Крепления</a></li>
-							<li><a href="#">Ботинки</a></li>
+							<li><a href="#">Кайты</a></li>
+							<li><a href="#">Кайтборды и аксессуары</a></li>
+							<li><a href="#">Трапеции</a></li>
+							<li><a href="#">Сноукайтборды и аксессуары</a></li>
+							<li><a href="#">Гидроодежда</a></li>
 							<li><a href="#">Защита</a></li>
+							<li><a href="#">Одежда</a></li>
+							<li><a href="#">Аксессуары</a></li>
+							<li><a href="#">Распродажа</a><span class="discount">-65%</span></a></li>
 						</ul>
 					</div>
 				</div>

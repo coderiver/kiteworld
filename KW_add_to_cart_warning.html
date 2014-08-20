@@ -8,6 +8,7 @@
 	<link rel="stylesheet" media="screen" href="css/slick.css" >
 	<link rel="stylesheet" media="screen" href="css/bootstrap.min.css" >
 	<link rel="stylesheet" media="screen" href="css/bootstrap-select.css" >
+	<link rel="stylesheet" media="screen" href="css/fontello.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
@@ -21,8 +22,10 @@
 			<a href="#" class="header__logo"></a>
 			<div class="col-md-1"></div>
 			<div class="col-md-4 header__info">
-				<div class="header__phone">8-800-2000-600</div>
-				<a href="#" class="header__mail">zakaz@kiteworld.ru</a>
+				<div class="header__text">
+					<div class="header__phone">8-800-2000-600</div>
+					<a href="#" class="header__mail">zakaz@kiteworld.ru</a>
+				</div>
 			</div>
 			<ul class="col-md-7 menu navbar-nav navbar-right">
 				<li class="menu__item">
@@ -141,7 +144,7 @@
 	<!-- END header -->
 	<!-- BEGIN container pay -->
 	<div class="container pay pay_top pay_top-warning">
-		<button class="pay__info js-info"></button>
+		<button class="pay__info js-info"><i></i></button>
 		<div class="row">
 			<div class="col-md-12"><h3 class="title">Корзина</h3></div>
 			<div class="col-md-12">
@@ -173,16 +176,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-2 col-sm-3 col-xs-6">
+					<div class="col-md-2 col-sm-3 col-xs-8 pad-mob">
 						<select class="selectpicker select">
 							<option>item1</option>
 							<option>item2</option>
 							<option>item3</option>
 						</select>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<div class="price">16 000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
-						<div class="discount">48 000 <img src="img/ruble-red.gif" alt="img" class="ruble"> - <strong>25</strong>%</div>
+					<div class="col-md-3 col-sm-3 col-xs-4">
+						<div class="price">16 000 <span class="ruble"></span></div>
+						<div class="discount">48 000 <span class="ruble"></span> - <strong>25</strong>%</div>
 					</div>
 				</div>
 				<div class="pay__row row">
@@ -196,18 +199,18 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-2 col-sm-3 col-xs-6">
+					<div class="col-md-2 col-sm-3 col-xs-8 pad-mob">
 						<select class="selectpicker select">
 							<option>item1</option>
 							<option>item2</option>
 							<option>item3</option>
 						</select>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<div class="price">16 000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					<div class="col-md-3 col-sm-3 col-xs-4">
+						<div class="price">16 000 <span class="ruble"></span></div>
 					</div>
 				</div>
-				<div class="pay__row pay__row_opacity row">
+				<div class="pay__row row">
 					<div class="col-md-7 col-sm-6">
 						<div class="media">
 							<a class="pull-left" href="#">
@@ -218,21 +221,21 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-2 col-sm-3 col-xs-6">
+					<div class="col-md-2 col-sm-3 col-xs-8 pad-mob">
 						<select class="selectpicker select">
 							<option>item1</option>
 							<option>item2</option>
 							<option>item3</option>
 						</select>
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-6">
-						<div class="price">16 000 <img src="img/ruble.gif" alt="img" class="ruble"></div>
+					<div class="col-md-3 col-sm-3 col-xs-4">
+						<div class="price">16 000 <span class="ruble"></span></div>
 					</div>
 				</div>
 				<div class="pay__row pay__row_mod pay__border"></div>
 				<div class="pay__row pay__row_mod row">
 					<div class="col-md-9 col-sm-9 col-xs-8 pay__col ">Общая стоимость товаров</div>
-					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">55 000 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
+					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">55 000 <span class="ruble"></span></div></div>
 				</div>
 				<div class="pay__row pay__row_mod row">
 					<div class="col-md-9 col-sm-9 col-xs-8 pay__col">Номер карты постоянного клиента</div>
@@ -244,12 +247,12 @@
 				</div>
 				<div class="pay__row pay__row_mod row">
 					<div class="col-md-9 col-sm-9 col-xs-8 pay__col">Накопительная скидка с прошлого заказа</div>
-					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">3 000 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
+					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">3 000 <span class="ruble"></span></div></div>
 				</div>
 				<div class="pay__row pay__border"></div>
 				<div class="pay__row row">
 					<div class="col-md-9 col-sm-9 col-xs-8 pay__col"><div class="pay__title">Итого к оплате</div></div>
-					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">52 000 <img src="img/ruble.gif" alt="img" class="ruble"></div></div>
+					<div class="col-md-3 col-sm-3 col-xs-4"><div class="price">52 000 <span class="ruble"></span></div></div>
 				</div>
 			</div>
 			<!-- BEGIN help -->
@@ -262,7 +265,7 @@
 					</li>
 					<li>Оставьте свой номер, и мы вам перезвоним.</li>
 					<li>
-						Свяжитесь по Skype:<br><a class="help__bold" href="#"><i class="help__ico-f"></i>kiteworld</a>
+						Свяжитесь по Skype:<br><a class="help__bold" href="#"><i class="icon-skype"></i>kiteworld</a>
 					</li>
 					<li>
 						Напишите нам:<br><a class="help__bold" href="#">info@kiteworld.ru</a>
@@ -285,14 +288,15 @@
 					<div class="footer__row">
 						<a href="#" class="footer__title-2">Магазин</a>
 						<ul class="footer__list">
-							<li><a href="#">Поясные</a></li>
-							<li><a href="#">Сидячие</a></li>
-							<li><a href="#">Комби</a></li>
-							<li><a href="#">Сноукайтборды</a></li>
-							<li><a href="#">Сноуборды</a></li>
-							<li><a href="#">Крепления</a></li>
-							<li><a href="#">Ботинки</a></li>
+							<li><a href="#">Кайты</a></li>
+							<li><a href="#">Кайтборды и аксессуары</a></li>
+							<li><a href="#">Трапеции</a></li>
+							<li><a href="#">Сноукайтборды и аксессуары</a></li>
+							<li><a href="#">Гидроодежда</a></li>
 							<li><a href="#">Защита</a></li>
+							<li><a href="#">Одежда</a></li>
+							<li><a href="#">Аксессуары</a></li>
+							<li><a href="#">Распродажа</a><span class="discount">-65%</span></a></li>
 						</ul>
 					</div>
 				</div>

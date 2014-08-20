@@ -47,6 +47,13 @@
 // p
 // 	+jpg(bla)
 
++font(rouble, rouble-webfont)  
+=ruble
+	font-family: "rouble"
+
++font(fontello, fontello)  
+=fontello
+	font-family: "fontello"
 
 +font(Proxima-Nova-Regular, Proxima-Nova-Regular)  
 =pr
@@ -125,6 +132,9 @@ body
 		text-align: center
 		display: inline-block
 		vertical-align: middle
+		.header__text
+			text-align: left
+			display: inline-block
 	.header-btn_menu
 		right: 0
 		i
@@ -217,8 +227,15 @@ body
 
 //ruble
 .ruble
-	height: 1.35ex
-	vertical-align: baseline
+	display: inline-block
+	&:before
+		content: "a"
+		+ruble
+
+//cred
+.cred
+	display: inline
+	+pr
 
 //drop
 .drop
@@ -262,9 +279,10 @@ body
 		a
 			color: $blue
 			font-size: 16px
-			display: block
+			display: inline-block
 		span
 			padding: 0 5px
+			color: $blue
 
 //btn
 .btn
@@ -295,6 +313,14 @@ body
 .btn-top
 	display: inline-block
 	+svg(pic-scr-top, 22, 14)
+
+//link
+.link
+	padding-left: 40px
+	a
+		margin-right: 20px
+		color: $blue
+		+pb
 
 //product
 .product
@@ -733,22 +759,6 @@ body
 		img
 			width: 100%
 			display: block
-	.kate__info
-		position: absolute
-		top: -9px
-		right: -54px
-		width: 156px
-		height: 63px
-		line-height: 77px
-		font-size: 28px
-		text-align: center
-		color: $white
-		text-transform: uppercase
-		background: #00d700
-		+rotate(45)
-		+pr
-		&.kate__info_red
-			background: #ff0000
 	.kate__text, .kate__name
 		color: $blue
 		display: block
@@ -763,6 +773,23 @@ body
 		font-size: 24px
 		color: #ff3333
 		+pr
+.kate__info
+	position: absolute
+	top: -10px
+	right: -58px
+	width: 156px
+	height: 63px
+	line-height: 77px
+	font-size: 28px
+	text-align: center
+	color: $white
+	text-transform: uppercase
+	background: #00d700
+	z-index: 1
+	+rotate(45)
+	+pb
+	&.kate__info_red
+		background: #ff0000
 
 //discount
 .discount
@@ -790,19 +817,24 @@ body
 			right: 0
 			width: 80px
 			height: 80px
+			line-height: 80px
 			z-index: 1
 			border-bottom: 5px solid #aec9e8
+			background: #cce4ff
 			display: none !important
-			+svg(pay-info, 76, 81)
 			+box
+			i
+				vertical-align: middle
+				display: inline-block
+				+svg(pay-info, 65, 65)
 			&:before
 				position: absolute
 				content: ''
 				top: 50%
 				left: 50%
-				margin: -30px 0 0 -30px
+				margin: -23px 0 0 -25px
 				display: none !important
-				+svg(pay-info2, 70, 60)
+				+svg(pay-info2, 52, 52)
 			&.is-active
 				background: #cce4ff
 				&:before
@@ -833,8 +865,10 @@ body
 	.pay__title
 		font-size: 24px
 		+pb
-	.pay__text
-		padding: 15px 0 0 40px
+	.pay__text 
+		padding: 20px 0 0 40px
+		font-weight: 400
+		+pr
 		a
 			margin-right: 20px
 			color: $blue
@@ -872,6 +906,8 @@ body
 	color: $white
 	background: #ff7518
 	+box
+	p
+		margin: 0
 	a
 		color: $white
 		text-decoration: underline
@@ -1033,6 +1069,11 @@ body
 		border-top: 4px solid #f2f2f2
 		&:first-child
 			border: none
+	.consist__item_first
+		padding-top: 0
+		.consist__row
+			&:first-child
+				margin-top: 0
 	.consist__row
 		margin-top: 20px
 	.consist__title
@@ -1094,12 +1135,17 @@ body
 				background: #f2f2f2 !important
 
 .radiobatton
+	display: block
+	+clr
 	input
 		&:checked
 			+ span
 				&:hover
 					&:before
 						background: #00aeff !important
+	// &.radiobatton_mod
+	// 	span
+	// 		margin-left: 10px
 
 //checkbox
 .checkbox
@@ -1121,6 +1167,7 @@ body
 		+pr
 		&:before
 			top: 0
+			border-width: 2px
 			background: #fff !important
 			+border-radius(0)
 			background: none
@@ -1151,6 +1198,11 @@ body
 		resize: none
 	&.input_28
 		width: 28%
+	&.input_focus
+		input
+			&:focus
+				+placeholder
+					font-size: 20px
 
 //table
 .table
@@ -1225,7 +1277,10 @@ body
 			top: 20px
 			left: 20px
 			+svg(arr-filter, 14, 22)
-
+//deliv_mod
+.deliv
+	&.deliv_mod
+		margin-bottom: 20px
 .index-ul
 	padding: 60px 0
 //filter__item_open
@@ -1269,6 +1324,8 @@ body
 		font-size: 18px
 	.footer__title-2_inl
 		display: inline-block
+	.footer__in
+		display: none
 	.footer__item
 		padding: 60px 0 70px 28px
 	.footer__item_visible
@@ -1315,12 +1372,20 @@ body
 	.navbar
 		width: 211px
 		a
-			font-size: 24px
+			font-size: 20px
 	.price.price_big
 		font-size: 26px
 	.order
 		.order__title_2
 			font-size: 20px
+	.kate
+		.kate__prise
+			font-size: 20px
+	.footer
+		.footer__title-2
+			font-size: 16px
+		.discount
+			font-size: 13px
 
 // max-width 992
 @media screen and (max-width: 992px)
@@ -1389,6 +1454,7 @@ body
 			+pr
 		.footer__in
 			padding-right: 20px
+			display: block
 			.footer__title-1
 				color: #b2b2b2
 				+pr
@@ -1423,8 +1489,21 @@ body
 		.title
 			margin: 0 !important
 			font-size: 26px !important
+	.kate .kate__prise-red
+		font-size: 16px
+	.link
+		display: none
 	.title
 		font-size: 26px !important
+	.product
+		margin: 0
+		.product__left
+			padding-left: 0
+			padding-right: 0
+		.buy__text
+			font-size: 16px
+		.characteristics, .availability
+			margin: 30px 0
 	.field_grey
 		background: none !important
 	.article
@@ -1451,12 +1530,17 @@ body
 		padding: 0 20px !important
 	.footer__item_first
 		padding-bottom: 60px !important
-	.footer__item_visible
-		margin: 60px 0 0 0
+	// .footer__item_visible
+	// 	margin: 60px 0 0 0
+	.footer
+		padding: 40px 0
 	.soc
 		margin: 40px 0 !important
-	.buy .buy__text
-		margin-left: 15px !important
+	.buy
+		.btn
+			width: 125px
+		.buy__text
+			margin-left: 15px !important
 	.pay__row_top
 		display: none
 	.pay__row
@@ -1486,6 +1570,7 @@ body
 			line-height: 1.4
 		.pay__title
 			font-size: 18px
+			padding-bottom: 10px
 		.radiobatton
 			span
 				font-size: 18px
@@ -1504,6 +1589,8 @@ body
 			display: none
 		&.pay__border_block
 			display: block !important
+		.pad-mob
+			padding-left: 85px
 	.deliv
 		margin-bottom: 8px !important
 		.col-grey
@@ -1512,9 +1599,14 @@ body
 			.price
 				vertical-align: middle
 				display: inline-block
-		.radiobatton
+		&.radiobatton
+			margin-right: 0
+			margin-left: 0
 			span
 				vertical-align: middle
+				font-size: 16px
+				font-weight: 400
+				+pr
 				&:before,
 				&:after
 					top: 50%
@@ -1589,3 +1681,23 @@ body
 			bottom: 0
 			background: #fff
 			z-index: 3
+	.help__title
+		margin-bottom: 18px
+	.pay .pay__left
+		padding-right: 15px
+		font-size: 16px
+		.input
+			margin-top: 0
+			input
+				font-size: 13px
+
+@media screen and (max-width: 465px)
+	.checkbox_mob
+		span
+			font-size: 14px
+			line-height: 20px
+			&:before
+				top: 8px
+			&:after
+				top: 13px
+		

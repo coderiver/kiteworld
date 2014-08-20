@@ -204,6 +204,12 @@ head.ready(function() {
 	// 	$(".js-setting-top").slideToggle();
 	// 	$(".js-setting-item, .js-filter").slideToggle();
 	// });
+
+	$(window).resize(function() {
+		if($('body').width() > 746) {
+			$('.filter__item_mob, .js-filter-block').hide();
+		}
+	});
 });
 
 $(window).load(function() {
