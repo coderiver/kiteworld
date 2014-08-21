@@ -432,6 +432,7 @@ body .loader { position: absolute; top: 50%; left: 50%; margin: -92px 0 0 -130px
   .price.price_big { font-size: 26px; }
   .order .order__title_2 { font-size: 20px; }
   .kate .kate__prise { font-size: 20px; }
+  .kate .kate__prise-red { font-size: 16px; }
   .footer .footer__title-2 { font-size: 16px; }
   .footer .discount { font-size: 13px; } }
 @media screen and (max-width: 992px) { .container { width: 100% !important; }
