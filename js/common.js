@@ -170,11 +170,6 @@ head.ready(function() {
 		$(this).toggleClass('is-active')
 	});
 
-	// isotope
-	$('#news').isotope({
-		// options
-		itemSelector: '.clause__item'
-	});
 	
 	$(".js-setting-top").click(function(){
 		$(this).hide();
@@ -208,6 +203,16 @@ head.ready(function() {
 	$(window).resize(function() {
 		if($('body').width() > 746) {
 			$('.filter__item_mob, .js-filter-block').hide();
+			// isotope
+			$('#news').isotope({
+				// options
+				itemSelector: '.clause__item'
+			});
+		}
+	});
+	$(window).resize(function() {
+		if($('body').width() < 746) {
+			$("#news").isotope( 'destroy' );
 		}
 	});
 });
