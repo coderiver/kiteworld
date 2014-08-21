@@ -170,6 +170,11 @@ head.ready(function() {
 		$(this).toggleClass('is-active')
 	});
 
+	// isotope
+	$('#news').isotope({
+		// options
+		itemSelector: '.clause__item'
+	});
 	
 	$(".js-setting-top").click(function(){
 		$(this).hide();
