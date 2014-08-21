@@ -316,7 +316,7 @@ body .loader { position: absolute; top: 50%; left: 50%; margin: -92px 0 0 -130px
 .order .order__btn { width: 178px; }
 .order .order__btn .btn__ico { vertical-align: middle; background: url("../img/svg/settings-pic.svg") no-repeat 0 0; -moz-background-size: 22px 22px 100%; -webkit-background-size: 22px 22px 100%; background-size: 22px 22px 100%; width: 22px; height: 22px; display: inline-block; display: none; }
 .order .order__checkbox { margin-bottom: 17px; }
-.order .order__checkbox span { font-size: 18px; }
+.order .order__checkbox span { height: auto !important; line-height: inherit !important; font-size: 18px; }
 .order .order__text_link { padding: 25px 0 18px; }
 .order .order__row .btn_green { padding: 0; width: 60px; vertical-align: super; }
 .order .order__row .btn_green i { vertical-align: middle; display: inline-block; background: url("../img/svg/settings-pic.svg") no-repeat 0 0; -moz-background-size: 22px 22px 100%; -webkit-background-size: 22px 22px 100%; background-size: 22px 22px 100%; width: 22px; height: 22px; display: inline-block; }
