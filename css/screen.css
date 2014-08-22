@@ -598,7 +598,7 @@ body .loader { position: absolute; top: 50%; left: 50%; margin: -92px 0 0 -130px
   .filter .filter__item_desc { display: none; }
   .filter .filter__setting { float: left; margin: 30px 0 20px; width: 100%; display: block; }
   .filter .filter__top { margin-top: 40px; }
-  .filter .filter__top .title { width: 100%; }
+  .filter .filter__top .title { width: 100%; font-size: 32px !important; }
   .filter .filter__item { padding-top: 45px; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: white; z-index: 3; }
   .help__title { margin-bottom: 18px; }
   .pay .pay__left { padding-right: 15px; font-size: 16px; }
