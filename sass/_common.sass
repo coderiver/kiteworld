@@ -70,7 +70,10 @@
 $white: #fff
 $black: #000
 $grey: #353535
-$blue: #0096FF
+$blue: #0078ff
+
+input
+	-webkit-appearance: none
 
 body
 	position: relative
@@ -348,10 +351,10 @@ body
 		&:before
 			display: none
 	.slick-prev
-		left: -3px
+		left: -2px
 		+svg(slick-prev, 34, 34)
 	.slick-next
-		right: -3px
+		right: -2px
 		+svg(slick-next, 34, 34)
 	.product__right
 		padding-left: 30px
@@ -1017,9 +1020,9 @@ body
 	padding-top: 40px
 	.order__title
 		margin: 30px 0 40px
-		padding-left: 15px
 		font-size: 36px
 		+pb
+		&.order__title_bot,
 		&.order__title_mod
 			padding: 0 50px 0 0
 			display: inline-block
@@ -1036,6 +1039,7 @@ body
 			width: 100%
 	.order__btn
 		width: 178px
+		vertical-align: super
 		.btn__ico
 			vertical-align: middle
 			+svg(settings-pic, 22, 22)
@@ -1067,19 +1071,27 @@ body
 	font-size: 14px
 	display: none
 	.consist__item
-		padding: 10px 0 30px 5px
+		padding: 30px 0 30px 2px
 		border-top: 4px solid #f2f2f2
 		&:first-child
+			padding-top: 10px
 			border: none
+	.consist__item_last
+		padding-top: 14px
+		.consist__title
+			font-size: 15px
 	.consist__item_first
 		padding-top: 0
 		.consist__row
 			&:first-child
 				margin-top: 0
 	.consist__row
-		margin-top: 20px
+		margin-top: 16px
+		font-size: 13px
+		&:first-child
+			margin-top: 6px
 	.consist__title
-		font-size: 14px
+		font-size: 13px
 		+pb
 
 //radiobatton
@@ -1189,6 +1201,7 @@ body
 		width: 100%
 		font-size: 20px
 		border: 2px solid #d9d9d9
+		-webkit-appearance: none
 		+placeholder-color($black)
 		+box
 		&:focus
@@ -1293,6 +1306,30 @@ body
 			z-index: 1
 			display: block
 
+//mob-visible-block
+.mob-visible-block
+	margin: 40px 0
+	padding-left: 15px
+	display: none
+	a
+		position: relative
+		margin-top: 25px
+		color: $blue
+		font-size: 24px
+		display: block
+		+pb
+		&:hover
+			color: $blue
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: 20px
+			margin-top: -10px
+			+svg(mob-link-rev, 14, 21)
+		&:first-child
+			margin-top: 0
+
 //footer
 .footer
 	color: #B2B2B2
@@ -1330,6 +1367,8 @@ body
 		display: none
 	.footer__item
 		padding: 60px 0 70px 28px
+		&:last-child
+			padding-left: 15px
 	.footer__item_visible
 		display: none
 		ul
@@ -1486,9 +1525,9 @@ body
 @media screen and (max-width: 768px)
 	.field__top, .field__top_grey
 		position: relative
-		padding: 30px 40px 30px 15px !important
+		padding: 19px 40px 17px 15px !important
 		color: $white
-		margin: 40px 0 !important
+		margin: 40px 0 37px !important
 		background: $black!important
 		.title
 			margin: 0 !important
@@ -1508,10 +1547,47 @@ body
 			font-size: 16px
 		.characteristics, .availability
 			margin: 30px 0
+		.slider
+			border-width: 2px
+		.product__title
+			font-size: 24px
+		.availability
+			font-size: 15px
+	.description
+		.title
+			&:first-letter
+				text-transform: uppercase
+	.reviews
+		.media
+			.date
+				padding-left: 0
+				font-size: 14px
+			.media-heading
+				font-size: 15px
+			.media-body
+				font-size: 16px
+			.media-body_mod
+				float: right
+				width: 66%
+	.mob-visible-block
+		display: block
 	.field_grey
 		background: none !important
+	.field_mob-grey
+		background: #f2f2f2
+	.field__top
+		width: 99.8% !important
+	.field__top_mob
+		background: none !important
+		.title
+			color: $black
+			font-size: 28px
+		.btn-top
+			display: none
 	.article
 		margin-bottom: 0
+		font-size: 15px
+		line-height: 1.3
 	.select-2_mod
 		display: block !important
 	.media-text
@@ -1620,9 +1696,11 @@ body
 			input
 				top: 50%
 				margin-top: -12px
+	.kate
+		margin-top: 30px
 	.pay_form
 		.pay__row
-			margin-bottom: 0
+			margin-bottom: 0 !important
 			.input
 				margin-top: 0
 				textarea
@@ -1631,13 +1709,41 @@ body
 			p
 				display: none
 		.btn
-			margin-top: 38px
+			margin-top: 24px
 			width: 100%
+	.pay 
+		.pay__row
+			margin-bottom: 20px
+		.pay__row_form, .pay__row_mod2
+			margin-bottom: 0
+		.pay__border
+			margin-bottom: 30px
+		.pay__border_block
+			margin-bottom: 20px
+		.media
+			margin-bottom: 0
+		.title_pmob
+			padding-top: 20px
+			font-size: 32px !important
+		.pay__title_lmob
+			padding-top: 10px
+		.title_pmob2
+			font-size: 28px !important
+		.pay_grey
+			padding-top: 35px
+		.pay__col
+			font-size: 15px
+		&.pay_top
+			.title
+				font-size: 32px !important
+		.pay__row_btn
+			margin-bottom: 40px !important
 	.order
 		.order__btn
 			padding: 0
 			width: 60px
-			vertical-align: super
+			height: 60px
+			vertical-align: middle
 			.btn__ico
 				display: inline-block
 		.btn__text
@@ -1645,13 +1751,27 @@ body
 		.table
 			display: none
 		.order__title
-			font-size: 20px
+			margin: 0 0 28px
+			padding-left: 0
+			font-size: 24px
+			&.order__title_mod
+				padding: 32px 19px 11px 0
+				font-size: 18px
+			&.order__title_bot
+				margin-top: 30px
+				padding: 26px 38px 11px 0
+				display: inline-block
+			&.order__title_bot2
+				margin-top: 27px
+			&.order__title_bot3
+				margin-top: 42px
+				margin-bottom: 18px
 		.consist__mob
 			display: block
 			.price
 				font-size: 16px
 		.row-xs
-			margin-bottom: 24px
+			margin-bottom: 5px
 			+clr
 			.col-xs-12
 				margin-bottom: 12px
@@ -1664,6 +1784,25 @@ body
 				display: block
 		.order__text
 			font-size: 14px
+		.order__text_link
+			padding: 15px 0 10px
+		.order__checkbox
+			margin: 14px 0 0 0 !important
+			span
+				font-size: 13px
+		.order__row .btn_green
+			height: 60px
+		.input_focus
+			input
+				font-size: 14px 
+		.order__client
+			.order__title	
+				margin-top: 8px
+				margin-bottom: 15px
+				padding-bottom: 0
+		.input .input__row_area
+			margin: 30px 0 17px
+			height: 130px 
 	.filter
 		.filter__item, .filter__sorting
 			display: none
@@ -1671,9 +1810,11 @@ body
 			display: none
 		.filter__setting
 			float: left
+			margin: 30px 0 20px
 			width: 100%
 			display: block
 		.filter__top
+			margin-top: 40px
 			.title
 				width: 100%
 		.filter__item
@@ -1704,4 +1845,8 @@ body
 				top: 8px
 			&:after
 				top: 13px
+	.title 
+		font-size: 22px !important
+		letter-spacing: 0.4px
+		line-height: 1
 		

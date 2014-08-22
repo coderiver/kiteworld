@@ -179,7 +179,7 @@
 					</div>
 					<div class="col-md-3 col-sm-3 col-xs-4">
 						<div class="price">16 000 <span class="ruble"></span></div>
-						<div class="discount">48 000 <span class="ruble"></span> - <strong>25</strong>%</div>
+						<div class="discount">48 000 <span class="ruble"></span><span class="text-mob-none"> - <strong>25</strong>%</span></div>
 					</div>
 				</div>
 				<div class="pay__row row">
@@ -278,7 +278,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-11 col-sm-12">
-					<h3 class="title">Доставка и оплата</h3>
+					<h3 class="title title_pmob">Доставка и оплата</h3>
 					<div class="pay__row pay__row_form row">
 						<div class="col-md-4 col-sm-4"><div class="pay__title">Адрес доставки</div></div>
 						<div class="col-md-2 col-sm-2 col-grey"><div class="input">
@@ -319,7 +319,7 @@
 					</div>
 					<label class="pay__row deliv radiobatton radiobatton_mod">
 						<div class="row">
-							<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title">Способ доставки</div></div>
+							<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title pay__title_lmob">Способ доставки</div></div>
 							<div class="col-md-6 col-sm-6 col-xs-7 col-grey">
 								<!-- BEGIN radiobatton -->
 								<input type="radio" checked="checked" name="delivery">
@@ -403,26 +403,26 @@
 						</div>
 					</label>
 					<div class="pay__row pay__border pay__border_none"></div>
-					<div class="pay__row pay__row_mod row">
+					<div class="pay__row pay__row_mod2 row">
 						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title pay__title_mob">Итого с доставкой</div></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 pay__col">Стоимость товаров</div>
-						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">52 000 <span class="ruble"></span></div></div>
+						<div class="col-md-6 col-sm-6 col-xs-8 pay__col">Стоимость товаров</div>
+						<div class="col-md-2 col-sm-2 col-xs-4"><div class="price">52 000 <span class="ruble"></span></div></div>
 					</div>
-					<div class="pay__row pay__row_mod row">
+					<div class="pay__row pay__row_mod2 row">
 						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title"></div></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 pay__col">Доставка курьером по Москве</div>
-						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">3 000 <span class="ruble"></span></div></div>
+						<div class="col-md-6 col-sm-6 col-xs-8 pay__col">Доставка курьером по Москве</div>
+						<div class="col-md-2 col-sm-2 col-xs-4"><div class="price">3 000 <span class="ruble"></span></div></div>
 					</div>
 					<div class="pay__row row">
 						<div class="col-md-4 col-sm-4 col-xs-12"><div class="pay__title"></div></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 pay__col">Комиссия за платёж пластиковой картой</div>
-						<div class="col-md-2 col-sm-2 col-xs-5"><div class="price">52 000 <span class="ruble"></span></div></div>
+						<div class="col-md-6 col-sm-6 col-xs-8 pay__col">Комиссия за платёж пластиковой картой</div>
+						<div class="col-md-2 col-sm-2 col-xs-4"><div class="price">52 000 <span class="ruble"></span></div></div>
 					</div>
 					<div class="pay__row pay__border pay__border_block"></div>
 					<div class="pay__row row">
 						<div class="col-md-4 col-sm-4 col-xs-12"></div>
-						<div class="col-md-6 col-sm-6 col-xs-7 pay__col"><div class="pay__title">Сумма к оплате</div></div>
-						<div class="col-md-2 col-sm-2 col-xs-5 pay__col"><div class="price price_big">52 250 <span class="ruble"></span></div></div>
+						<div class="col-md-6 col-sm-6 col-xs-8 pay__col"><div class="pay__title">Сумма к оплате</div></div>
+						<div class="col-md-2 col-sm-2 col-xs-4 pay__col"><div class="price price_big">52 250 <span class="ruble"></span></div></div>
 					</div>
 				</div>
 			</div>
@@ -435,7 +435,7 @@
 		<!-- BEGIN row pay pay_form -->
 		<div class="row pay pay_form">
 			<div class="col-md-11 col-sm-12">
-				<h3 class="title">Ваши контактные данные</h3>
+				<h3 class="title title_pmob2">Ваши контактные данные</h3>
 				<div class="pay__row row">
 					<div class="col-md-4 col-sm-4"><div class="pay__title">ФИО</div></div>
 					<div class="col-md-8 col-sm-8">
@@ -482,15 +482,11 @@
 							</div>
 						</div>
 					</div>
-				</div><div class="pay__row row">
+				</div><div class="pay__row pay__row_btn row">
 					<div class="col-md-4 col-sm-4"></div>
 					<div class="col-md-8 col-sm-8">
-						<div class="input">
-							<div class="input__row input__row_area">
-								<button class="btn btn_green">Оформить заказ</button>
-							</div>
-						</div>
-						<p></p>
+						<button class="btn btn_green">Оформить заказ</button>
+						
 					</div>
 				</div>
 			</div>

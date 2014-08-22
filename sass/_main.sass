@@ -140,6 +140,8 @@
 		+pb
 	.clause__name
 		font-size: 16px
+	.clause__name, .clause__title
+		color: #0078ff
 	.clause__title
 		font-size: 24px
 		line-height: 1.1
@@ -190,10 +192,30 @@
 				font-size: 32px
 //max-width: 768
 @media screen and (max-width: 768px)
+	.text-mob-none
+		display: none
 	.category
 		.category__item
 			height: 81px
 			width: 100%
+		.category__prise
+			+pr
+	.clause 
+		padding: 30px 0
+		.title
+			font-size: 28px !important
+			margin-top: 10px
+			padding-bottom: 10px
+		.clause__text
+			font-size: 15px
+		&.clause_news,
+		&.clause_school,
+		&.clause_tour
+			.clause__title
+				font-size: 22px
+			.clause__name
+				font-size: 16px
+
 @media screen and (max-width: 322px)
 	.topic
 		display: none
